@@ -1,0 +1,63 @@
+site_name: Bulk Blue Jay Workflow
+repo_url: https://github.com/mjanowiecki/archivesspace-collection-ingest
+repo_name: ArchivesSpace Collection Ingest
+nav:
+  - Home: index.md
+  - Workflow steps:
+    - 1. Set up workflow: workflow/1-set-up-workflow.md
+    - 2. Fill out templates: workflow/2-fill-out-templates.md
+    - 3. Create new collection: workflow/3-create-new-collection.md
+    - 4. Post agents: workflow/4-post-agents.md
+    - 5. Post subjects: workflow/5-post-subjects.md
+    - 6. Post top containers: workflow/6-post-top-containers.md
+    - 7. Post digital objects: workflow/7-post-digital-objects.md
+    - 8. Update archival object template: workflow/8-update-archival-objects.md
+    - 9. Post archival objects: workflow/9-post-archival-objects.md
+  - CSV templates:
+    - Archival objects: csv-templates/archival-object-template.md
+    - Corporate entities: csv-templates/corporate-entity-template.md
+    - Digital objects: csv-templates/digital-object-template.md
+    - Families: csv-templates/family-template.md
+    - Persons: csv-templates/person-template.md
+    - Subjects: csv-templates/subject-template.md
+    - Top containers: csv-templates/top-container-template.md
+  - Python scripts:
+      - How to run the scripts: python-scripts/running-the-scripts.md
+      - Extract value script: python-scripts/extract-values.md
+      - Find and replace script: python-scripts/find-and-replace.md
+      - Matching names script: python-scripts/matching-names.md
+theme:
+  name: material
+  logo: bluejay.png
+  language: en
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - content.code.copy
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: light blue
+  font:
+    text: Roboto
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+  - toc:
+        permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+copyright: Copyright &copy; 2025 Bulk Blue Jay Workflow. All rights reserved.
