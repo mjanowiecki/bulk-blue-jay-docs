@@ -51,12 +51,6 @@ title: How to fill out family template CSV
     - Allows multiple values: :x: False
     - Data type: Controlled list - Name Rule
 
-??? note "prefix"
-    - ArchivesSpace field equivalent: Prefix
-    - Required in CSV: :x: False 
-    - Allows multiple values: :x: False 
-    - Data type: String
-
 ??? note "family_name"
     - ArchivesSpace field equivalent: Family Name
     - Required in CSV: :white_check_mark: True
@@ -156,27 +150,16 @@ title: How to fill out family template CSV
             - ArchivesSpace field equivalent: Note Type
             - Required in field: :white_check_mark: True
             - Data type: Controlled list - 
-        - publish_note
+        - publish
             - ArchivesSpace field equivalent: Publish
             - Required in field: :white_check_mark: True
             - Data type: Boolean
-        - label
-            - ArchivesSpace field equivalent: Label
-            - Required in field: :x: False
-            - Data type: String
-        - subnote_type
-            - ArchivesSpace field equivalent: Note Type
-            - Required in field: :white_check_mark: True
-            - Data type: Controlled list - 
         - content
             - ArchivesSpace field equivalent: Content
             - Required in field: :white_check_mark: True
             - Data type: String
-        - publish_subnote
-            - ArchivesSpace field equivalent: Publish
-            - Required in field: :white_check_mark: True
-            - Data type: Boolean
-    - Example: `note_type==bioghist;;publish_note==TRUE;;subnote_type==text;;content==Sir Jay Azul Jr. II was born in Portland, Maine. He worked on ornithology projects at seven universities throughout his career.;;publish_subnote==TRUE`
+    - Additional information: The note and subnote both receive their publish status from the field `publish`. At this time, only plain text is accepted as a subnote.
+    - Example: `note_type==bioghist;;publish==TRUE;;content==Sir Jay Azul Jr. II was born in Portland, Maine. He worked on ornithology projects at seven universities throughout his career.`
 
 ## :octicons-lock-16: Default values
 
