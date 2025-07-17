@@ -32,9 +32,26 @@ To run these scripts against your ArchivesSpace API, you must have two `secret` 
     Be sure to add these scripts to your `.gitignore` file in order to avoid uploading your password to a public repository like [GitHub](https://github.com/).
 
 ```py title="secret.py"
-baseURL = 'yourarchivesspace.com'
+baseURL = 'https://yourarchivesspacesb.com'
 user = 'username'
 password = 'password'
 repository = '4'
 verify = False
 ```
+
+```py title="secretProd.py"
+baseURL = 'https://yourarchivesspace.com'
+user = 'username'
+password = 'password'
+repository = '4'
+verify = False
+```
+
+```py title="gitignore"
+secret.py
+secretProd.py
+```
+
+## 4. Create a CSV called `alreadyExistingEntities.csv`
+
+This spreadsheet should have three columns: `agent_name`, `subject_name`, and `uri`. After creating it, leave it blank for now. It will be used in steps 4, 5, and 8.

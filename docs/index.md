@@ -3,7 +3,7 @@ title: Bulk Blue Jay Workflow
 ---
 # Bulk Blue Jay Workflow
 
-The bulk blue jay  workflow (BBJW) is workflow via Python scripts to ingest full collections via [ArchivesSpace REST API](https://archivesspace.github.io/archivesspace/api/#archivesspace-rest-api).
+The Bulk Blue Jay Workflow (BBJW) is workflow via Python scripts to ingest full collections via [ArchivesSpace REST API](https://archivesspace.github.io/archivesspace/api/#archivesspace-rest-api).
 
 ## Background of project
 

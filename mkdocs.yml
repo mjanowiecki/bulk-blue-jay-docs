@@ -22,9 +22,8 @@ nav:
     - Subjects: csv-templates/subject-template.md
     - Top containers: csv-templates/top-container-template.md
   - Python scripts:
-      - How to run the scripts: python-scripts/running-the-scripts.md
+      - Create entity scripts: python-scripts/running-the-scripts.md
       - Extract value script: python-scripts/extract-values.md
-      - Find and replace script: python-scripts/find-and-replace.md
       - Matching names script: python-scripts/matching-names.md
 theme:
   name: material

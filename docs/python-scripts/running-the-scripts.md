@@ -1,4 +1,4 @@
-# How to run scripts
+# Create entities scripts
 
 ## The basics
 Before running any scripts, ensure you have the following in the same folder:
@@ -53,6 +53,16 @@ To edit production server, enter secret filename:
 Editing Stage
 ```
 
+## Recommendations for using POST scripts
+
+1. First test your script by creating the JSON files and reviewing them manually for any obvious errors. While you don't have to look at every single file, select a representative sample of 5 or more to review. I would recommend, however, running all of your expected data in the script to see if any errors are triggered.
+
+2. After you feel confident that your JSON files are correct, test running your script against your sandbox instance. Record the amount of time it takes to run. Review both the log for errors and review a representative sample on the sandbox interface to ensure the update worked as expected.
+
+3. Once you feel confident about the results of your script/data in the sandbox, talk with whoever is response for the technical maintenance of your ArchivesSpace instances and figure out a date when you can run the script against production. Our technical folks always back up the most recent save of our Production instance directly before we run POST scripts.
+
+4. Run your script in Production, preferably after regular working hours to improve running times and prevent any interruptions if any errors occur. After the script completes, Review both the log for errors and review a representative sample on the sandbox interface to ensure the update worked as expected. To avoid problems over the weekend/breaks, I would NOT recommend running any POST script against Production on Friday evenings or right before holidays.
+
 ## Errors
 
 ### JSONDecodeError
@@ -64,8 +74,10 @@ This error typically happens when the API returns an error code instead of a JSO
 Meaning of common error codes:
 
 - `400: Bad Request` -- Your request is invalid. Check that your URL is formatted properly.
-- `401: Unauthorized` -- Something bad is happening with your login.
+- `401: Unauthorized` -- Something bad is happening with your login. Double check your password and username.
 - `403: Forbidden` -- You don't have permissions for this request.
-- `404: Not Found` -- The specified entity could not be found. This is typically an improperly formatted URL.
+- `404: Not Found` -- The specified entity could not be found. This is typically an improperly formatted URL but could also be a deleted entity.
 - `500: Internal Server Error` -- Typically, this is not your fault! Talk to your tech folks. Mostly likely your server is out of memory.
 - `503: Service Unavailable` --  Typically, this is not your fault! Talk to your tech folks.
+
+### 
