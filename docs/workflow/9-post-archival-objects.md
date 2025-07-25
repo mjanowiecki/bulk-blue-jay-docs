@@ -1,5 +1,7 @@
 ---
 title: Post new archival objects to ArchivesSpace
+hide:
+  - toc
 ---
 
 !!! Tip

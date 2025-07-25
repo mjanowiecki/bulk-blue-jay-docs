@@ -1,5 +1,7 @@
 ---
 title: Fill out CSV templates for ArchivesSpace entities
+hide:
+  - toc
 ---
 
 For your collection, create spreadsheets for the following types of entities according to our template guidelines. These templates assume that you will create the main resource for the collection manually.
@@ -46,6 +48,9 @@ The data types given in the CSV template indicate what type of value is needed b
 ### :fontawesome-solid-keyboard: String
 Any characters can be entered in this cell, including numbers, letters, and symbols. For instance, a URL, barcode, or a paragraph of text would be accepted as string values.
 
+### :octicons-number-16: Integers
+Any positive whole numbers, like 1, 2, 3, 4, etc.
+
 ### :fontawesome-solid-list: Controlled List
 
 Only values from the specified controlled list can be used. To find see the accepted values, either navigate to  `System → Controlled Value lists` in the staff interface of ArchivesSpace or view your `enumerations.csv` -- the name of the Controlled List is in column `Enumeration` and the accepted values are in column `Value code.` 
@@ -78,13 +83,15 @@ The only accepted values in these fields are `TRUE` or `FALSE`.
 
 ### :material-link: Ref
 
-The only accepted values in these fields are URIs from your local ArchivesSpace instance. Do not include the "base" component of the URI.
+For ingest, the only accepted values in these fields are URIs (aka Refs) from your local ArchivesSpace instance. Do not include the "base" component of the URI.
 
 Examples:
 
 - `/agents/corporate_entities/879`
 - `/subjects/339`
 - `/repositories/3/archival_objects/84637`
+
+If the URI has not yet been created, please type the exact name or title of the object instead. These will be replaced by their URIs in step 8.
 
 ### :material-format-list-group-plus: Subfield type
 

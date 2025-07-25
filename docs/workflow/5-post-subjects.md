@@ -1,5 +1,7 @@
 ---
 title: Post new subjects to ArchivesSpace
+hide:
+  - toc
 ---
 
 # Post new subjects to ArchivesSpace

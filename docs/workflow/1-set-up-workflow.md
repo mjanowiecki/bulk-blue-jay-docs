@@ -1,14 +1,16 @@
 ---
 title: Set up workflow
+hide:
+  - toc
 ---
 
 # Set up workflow
 
-To use this workflow, there are a few details to configure on your local machine.
+To use this workflow, there are a few details to configure on your local computer.
 
 ## 1. Clone repository from GitHub
 
-To fully run this workflow, you must be able to run the Python scripts contained [archivesspace-collection-ingest](https://github.com/mjanowiecki/archivesspace-collection-ingest) from your local computer. The easiest way to do this is by cloning [archivesspace-collection-ingest](https://github.com/mjanowiecki/archivesspace-collection-ingest). 
+To fully run this workflow, you must be able to run the Python scripts contained [archivesspace-collection-ingest](https://github.com/mjanowiecki/archivesspace-collection-ingest) from your local computer. The easiest way to do this is by cloning [archivesspace-collection-ingest](https://github.com/mjanowiecki/archivesspace-collection-ingest). Be sure to install all of the required packages listed in `requirements.txt` in the repository.
 
 For more instructions on cloning, see [:simple-github: GitHub Docs: Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
@@ -47,7 +49,7 @@ repository = '4'
 verify = False
 ```
 
-```py title="gitignore"
+```py title=".gitignore"
 secret.py
 secretProd.py
 ```

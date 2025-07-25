@@ -1,5 +1,7 @@
 ---
 title: How to fill out archival object CSV
+hide:
+  - toc
 ---
 
 # How to fill out archival object template CSV
@@ -19,100 +21,129 @@ title: How to fill out archival object CSV
     - ArchivesSpace field equivalent: *Where object is nested*
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False
-    - Data type: Ref
+    - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
 
 ??? note "position"
     - ArchivesSpace field equivalent: *Order of archival objects*
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: Integer
+    - Data type: [Integer](../workflow/2-fill-out-templates.md/#integers)
 
 ??? note "other_level"
     - ArchivesSpace field equivalent: Other Level
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ### Columns related to `Basic Information`
 ??? note "title"
     - ArchivesSpace field equivalent: Title
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "resource"
     - ArchivesSpace field equivalent:
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Ref
+    - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
 
 ??? note "component_id"
     - ArchivesSpace field equivalent: Component Unique Identifier
     - Required in CSV: :x: False 
     - Allows multiple values: :x: False 
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "level"
     - ArchivesSpace field equivalent: Level of Description
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Controlled list - Archival Record Level
+    - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Archival Record Level
 
 ??? note "publish"
     - ArchivesSpace field equivalent: Publish?
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Boolean 
+    - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
 
 ??? note "suppressed"
     - ArchivesSpace field equivalent: Supress button
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Boolean
+    - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
 
 ??? note "restrictions_apply"
     - ArchivesSpace field equivalent: Restrictions Apply?
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Boolean
+    - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
 
 ??? note "repository_processing_note"
     - ArchivesSpace field equivalent: Repository Processing Note
     - Required in CSV: :x: False
     - Allows multiple values: :x: False 
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+
+### Columns related to `Languages`
+??? note "lang_materials"
+    - ArchivesSpace field equivalent: 
+    - Required in CSV: :x: False
+    - Allows multiple values: :white_check_mark: True
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
+    - Allowed subfields:
+        - language
+            - ArchivesSpace field equivalent: Language
+            - Required in field: :white_check_mark: True
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Language ISO 639-2
+        - script
+            - ArchivesSpace field equivalent: Script
+            - Required in field: :x: False
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Language ISO 15924
+        - label
+            - ArchivesSpace field equivalent: 
+            - Required in field: :x: False
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+        - publish
+            - ArchivesSpace field equivalent: Publish
+            - Required in field: :x: False
+            - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
+        - content
+            - ArchivesSpace field equivalent: Content
+            - Required in field: :x: False
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+    - Example: `language==fre;;publish==True;;script==Latn;;content==All audio is in French.`
 
 ### Columns related to `Dates`
 ??? note "dates"
     - ArchivesSpace field equivalent: Dates section
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields: 
         - label
             - ArchivesSpace field equivalent: Label
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Date Label
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Label
         - expression
             - ArchivesSpace field equivalent: Expression
             - Required in field: :x: False
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - date_type
             - ArchivesSpace field equivalent: Type
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Date Type
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Type
         - begin
             - ArchivesSpace field equivalent: 
             - Required in field: :x: False
-            - Data type: String - YYYY, YYYY-MM, or YYYY-MM-DD
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string) - YYYY, YYYY-MM, or YYYY-MM-DD
         - end
             - ArchivesSpace field equivalent: 
             - Required in field: :x: False
-            - Data type: String - YYYY, YYYY-MM, or YYYY-MM-DD
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string) - YYYY, YYYY-MM, or YYYY-MM-DD
         - certainty
             - ArchivesSpace field equivalent: 
             - Required in field: :x: False
-            - Data type: Controlled list - Date Certainty
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Certainty
     - Example: `label==creation;;date_type==single;;expression==2007 April 30;;begin==2007-04-30`
 
 ### Columns related to `Extents`
@@ -120,24 +151,24 @@ title: How to fill out archival object CSV
     - ArchivesSpace field equivalent: Extents section
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type 
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type) 
     - Allowed subfields
         - portion
             - ArchivesSpace field equivalent:
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Extent Portion
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Extent Portion
         - number
             - ArchivesSpace field equivalent:
             - Required in field: :white_check_mark: True
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - type
             - ArchivesSpace field equivalent:
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Extent Extent Type
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Extent Extent Type
         - container_summary
             - ArchivesSpace field equivalent:
             - Required in field: :x: False
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - physical_details
             - ArchivesSpace field equivalent:
             - Required in field: :x: False
@@ -145,28 +176,28 @@ title: How to fill out archival object CSV
         - dimensions
             - ArchivesSpace field equivalent:
             - Required in field: :x: False
-            - Data type: String
-    - Example:
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+    - Example: `number==.167;;container_summery==1 folder;;portion==whole;;type==cubic feet`
 
 ### Columns related to `Agent Links`
 ??? note "linked_agents"
     - ArchivesSpace field equivalent: Agent Links section
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields:
         - ref 
             - ArchivesSpace field equivalent: Agents
             - Required in field: :white_check_mark: True
-            - Data type: Ref
+            - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
         - relator
             - ArchivesSpace field equivalent: Relator
             - Required in field: :x: False
-            - Data type: Controlled list - Linked Agent Archival Record Relators
+            - Data type:[Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Linked Agent Archival Record Relators
         - role
             - - ArchivesSpace field equivalent: Role
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Linked Agent Role
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Linked Agent Role
     - Example: `role==creator;;relator==pht;;ref==/agents/corporate_entities/388`
 
 ### Columns related to `Accession Links`
@@ -174,7 +205,7 @@ title: How to fill out archival object CSV
     - ArchivesSpace field equivalent: Accession Links section
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Ref
+    - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
     - Example: `/repositories/3/accessions/120`
 
 ### Columns related to `Subjects`
@@ -183,87 +214,123 @@ title: How to fill out archival object CSV
     - ArchivesSpace field equivalent: Subjects section
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Ref
+    - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
     - Example: `/subjects/2553|/subjects/551`
 
 ### Columns related to `Notes`
+The type of note needed depends on your note type. 
+
+Multipart type notes
+
+- Conditions Governing Access
+- Accruals
+- Immediate Source of Acquisition
+- Existence and Location of Copies
+- Appraisal
+- Arrangement
+- Biographical / Historical
+- Custodial History
+- Dimensions 
+- File Plan
+- Legal Status
+- General
+- Existence and Location of Originals
+- Other Finding Aids
+- Physical Characteristics and Technical Requirements
+- Preferred Citation 
+- Processing Information
+- Related Materials
+- Scope and Contents
+- Separated Materials
+- Conditions Governing Use
+
+
+Single type notes
+
+- Abstract
+- Materials Specific Details
+- Physical Description
+- Physical Facet
+- Physical Location
+
 ??? note "multipart_note"
     - ArchivesSpace field equivalent: Multipart Note
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields:
         - note_type
             - ArchivesSpace field equivalent: Note Type
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Note Multipart Type
+            - Data type:[Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Note Multipart Type
         - publish
             - ArchivesSpace field equivalent: Publish
             - Required in field: :white_check_mark: True
-            - Data type: Boolean
+            - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
         - content
             - ArchivesSpace field equivalent: Content
             - Required in field: :white_check_mark: True
-            - Data type: String
-    - Example: 
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+    - Example: `type==materialspec;;publish==True;;content==Includes drafts of the paper, “Are blue jays the rudest birds in Maryland? A scientific approach.”||type==acqinfo;;publish==True;;content==Processed by Lauren McAwesomeSauce in May 2025.`
+    - Additional information: The note and subnote both receive their publish status from the field `publish`. At this time, the content subfield only accepts string/free-text values.
 
 ??? note "singlepart_note"
     - ArchivesSpace field equivalent: Single Part Note
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields:
         - note_type
             - ArchivesSpace field equivalent: Note Type
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Note Singlepart Type
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Note Singlepart Type
         - publish
             - ArchivesSpace field equivalent: Publish
             - Required in field: :white_check_mark: True
-            - Data type: Boolean
+            - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
         - content
             - ArchivesSpace field equivalent: Content
             - Required in field: :white_check_mark: True
-            - Data type: String
-
-??? note "lang_materials"
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+    - Example: `type==physdesc;;publish==True;;content==175 photographs of 57 feathers.`
+    - Additional information: The note and subnote both receive their publish status from the field `publish`. At this time, the content subfield only accepts string/free-text values.
 
 ### Columns related to `Instances`
 ??? note "instances"
     - ArchivesSpace field equivalent: Instances section
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields:
         - type
             - ArchivesSpace field equivalent: Type
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) -Instance Instance Type
         - top_container
             - ArchivesSpace field equivalent: Type
             - Required in field: :white_check_mark: True
-            - Data type: ref
+            - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
         - child_type
             - ArchivesSpace field equivalent: Child Type
             - Required in field: :x: False
-            - Data type: Controlled list
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Container Type
         - child_indicator
             - ArchivesSpace field equivalent: Child Indicator
             - Required in field: :x: False
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - child_container_barcode
             - ArchivesSpace field equivalent: Child Container Barcode
             - Required in field: :x: False
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - grandchild_type
             - ArchivesSpace field equivalent: Grandchild Type
             - Required in field: :x: False
-            - Data type: Controlled list
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Container Type
         - grandchild_indicator
             - ArchivesSpace field equivalent: Grandchild Indicator
             - Required in field: :x: False
-            - Data type: String
-    - Example: 
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+    - Example: `indicator_2==6;;ref==/repositories/3/top_containers/21451;;instance_type==mixed_materials;;type_2==folder;;is_representative==False`
 
 ## :octicons-lock-16: Default values
 

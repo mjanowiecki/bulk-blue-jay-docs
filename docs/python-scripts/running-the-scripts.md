@@ -1,4 +1,8 @@
-# Create entities scripts
+---
+title: Create entities scripts
+hide:
+  - toc
+---
 
 ## The basics
 Before running any scripts, ensure you have the following in the same folder:

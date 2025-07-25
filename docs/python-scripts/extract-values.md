@@ -1,5 +1,7 @@
 ---
 title: Extract value script
+hide:
+  - toc
 ---
 
 # Extract value script

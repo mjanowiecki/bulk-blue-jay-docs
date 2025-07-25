@@ -1,5 +1,7 @@
 ---
 title: How to fill out corporate entity template CSV
+hide:
+  - toc
 ---
 
 # How to fill out corporate entity template CSV
@@ -25,7 +27,7 @@ title: How to fill out corporate entity template CSV
     - While this is automatically generated during ingest, it is important to have it in the spreadsheet for matching with pre-existing names in step 4.
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ### Columns related to `Basic Information`
 
@@ -33,104 +35,104 @@ title: How to fill out corporate entity template CSV
     - ArchivesSpace field equivalent: Publish
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Boolean
+    - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
 
 ### Columns related to `Identity Information: Name Forms`
 ??? note "authority_id"
     - ArchivesSpace field equivalent: Authority ID   
     - Required in CSV: :x: False
     - Allows multiple values: :x: False 
-    - Data type: String - External URI
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string) - External URI
 
 ??? note "source"
     - ArchivesSpace field equivalent:  Source
     - Required in CSV: :x: False
     - Allows multiple values: :x: False 
-    - Data type: Controlled list - Name Source 
+    - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Name Source 
 
 ??? note "rules"
     - ArchivesSpace field equivalent: Rules
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: Controlled list - Name Rule
+    - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Name Rule
 
 ??? note "primary_name"
     - ArchivesSpace field equivalent: Primary Part of Name
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "subordinate_name_1"
     - ArchivesSpace field equivalent: Subordinate Name 1
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "subordinate_name_2"
     - ArchivesSpace field equivalent: Subordinate Name 2
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "number"
     - ArchivesSpace field equivalent: Number
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "dates"
     - ArchivesSpace field equivalent: Dates
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "location"
     - ArchivesSpace field equivalent: Location
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "conference_meeting"
     - ArchivesSpace field equivalent: Conference Meeting?
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: Boolean
+    - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
 
 ??? note "jurisdiction"
     - ArchivesSpace field equivalent: Jurisdiction?
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: Boolean
+    - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
 
 ??? note "qualifier"
     - ArchivesSpace field equivalent: Qualifier
     - Required in CSV: :x: False
     - Allows multiple values: :x: False
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ### Columns related to `Description Information: Dates of Existence`
 ??? note "dates_of_existence"
     - ArchivesSpace field equivalent: Dates of Existence section
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields: 
         - date_type_structured
             - ArchivesSpace field equivalent: Date Type
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Date Type Structured
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Type Structured
         - date_certainty
             - ArchivesSpace field equivalent: Certainty
             - Required in field: :x: False
-            - Data type: Controlled list - Date Certainty
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Certainty
         - date_role
             - ArchivesSpace field equivalent: Single Date - Date Role
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - Date Role
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Role
         - date_expression
             - ArchivesSpace field equivalent: Single Date - Date Expression
             - Required in field: :x: False
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - date_standardized
             - ArchivesSpace field equivalent: Single Date - Standardized Date
             - Required in field: :x: False
@@ -138,31 +140,31 @@ title: How to fill out corporate entity template CSV
         - date_standardization_type
             - ArchivesSpace field equivalent: Single Date - Standardized Date Type
             - Required in field: :x: False
-            - Data type: Controlled list - Date Standardization Type
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Standardization Type
         - begin_date_expression
             - ArchivesSpace field equivalent: Range Date - Begin Date Expression
             - Required in field: :x: False
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         -begin_date_standardized
             - ArchivesSpace field equivalent: Range Date - Begin Standardized Date
             - Required in field: :x: False
-            - Data type: String - YYYY-MM-DD
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string) - YYYY-MM-DD
         - begin_date_standardized_type
             - ArchivesSpace field equivalent: Range Date - Begin Standardized Date Type
             - Required in field: :x: False
-            - Data type: Controlled list - Begin Date Standardized Type
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Begin Date Standardized Type
         - end_date_expression
             - ArchivesSpace field equivalent: Range Date - End Date Expression
             - Required in field: :x: False
-            - Data type: String
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - end_date_standardized
             - ArchivesSpace field equivalent: Range Date - End Standardized Date
             - Required in field: :x: False
-            - Data type: String - YYYY-MM-DD
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string) - YYYY-MM-DD
         - end_date_standardized_type
             - ArchivesSpace field equivalent: Range Date - End Standardized Date Type
             - Required in field: :x: False
-            - Data type: Controlled list - End Date Standardized Type
+            - Data type:[Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - End Date Standardized Type
     - Example: `date_type_structured==range;;date_certainty==approximate;;begin_date_expression==1985;;end_date_expression==2010`
 
 ### Columns related to `Description Information: Notes`
@@ -170,21 +172,21 @@ title: How to fill out corporate entity template CSV
     - ArchivesSpace field equivalent: Single Part Note
     - Required in CSV: :x: False
     - Allows multiple values: :white_check_mark: True
-    - Data type: Subfield type
+    - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields:
         - note_type
             - ArchivesSpace field equivalent: Note Type
             - Required in field: :white_check_mark: True
-            - Data type: Controlled list - 
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - 
         - publish
             - ArchivesSpace field equivalent: Publish
             - Required in field: :white_check_mark: True
-            - Data type: Boolean
+            - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
         - content
             - ArchivesSpace field equivalent: Content
             - Required in field: :white_check_mark: True
-            - Data type: String
-    - Additional information: The note and subnote both receive their publish status from the field `publish`. At this time, only plain text is accepted as a subnote.
+            - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+    - Additional information: The note and subnote both receive their publish status from the field `publish`. At this time, the content subfield only accepts string/free-text values.
     - Example: `note_type==bioghist;;publish==TRUE;;content==Choreographer and artistic directory of the Peabody Preparatory dance department, circa 1985-2010.`
 
 ## :octicons-lock-16: Default values

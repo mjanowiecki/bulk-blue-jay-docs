@@ -1,5 +1,7 @@
 ---
 title: How to fill out subject template CSV
+hide:
+  - toc
 ---
 
 # How to fill out subject template CSV
@@ -26,13 +28,13 @@ title: How to fill out subject template CSV
     - ArchivesSpace field equivalent: Authority ID   
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: String - External URI
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string) - External URI
 
 ??? note "source"
     - ArchivesSpace field equivalent:  
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Controlled list - Subject Source
+    - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Subject Source
 
 ### Columns related to `Terms and Subdivisions`
 
@@ -40,13 +42,13 @@ title: How to fill out subject template CSV
     - ArchivesSpace field equivalent: Term  
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: String
+    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "term_type"
     - ArchivesSpace field equivalent: Term  
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
-    - Data type: Controlled list - Subject Term Type
+    - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Subject Term Type
 
 
 ## :octicons-lock-16: Default values

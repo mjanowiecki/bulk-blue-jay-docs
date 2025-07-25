@@ -1,5 +1,7 @@
 ---
 title: Matching script
+hide:
+  - toc
 ---
 
 # Matching script

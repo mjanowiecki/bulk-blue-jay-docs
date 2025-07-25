@@ -1,5 +1,7 @@
 ---
 title: Bulk Blue Jay Workflow
+hide:
+  - toc
 ---
 # Bulk Blue Jay Workflow
 
@@ -7,7 +9,7 @@ The Bulk Blue Jay Workflow (BBJW) is workflow via Python scripts to ingest full 
 
 ## Background of project
 
-
+*Coming soon!*
 
 ## What this project does
 
@@ -44,9 +46,14 @@ This project uses CSV spreadsheets and Python scripts to upload entities (like S
 
 </div>
 
+## A note on examples
+
+Throughout this documentation, the Blue Jay Example Collection is used to help explain our workflow in greater detail. This collection is entirely fictitious and does not represent best archival practices. Instead, the examples were formulated for their ability to clarify data entry and workflows, rather adherence to best practices in DACS or other descriptive practices.
+
 ## Copyright
 
 This documentation is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+
 
 ## Additional resources
  - [ArchivesSpace RESTful API](https://archivesspace.github.io/archivesspace/api/#introduction)

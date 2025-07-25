@@ -1,5 +1,7 @@
 ---
 title: Post top containers to ArchivesSpace
+hide:
+  - toc
 ---
 
 # Post top containers to ArchivesSpace

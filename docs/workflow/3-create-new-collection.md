@@ -1,5 +1,7 @@
 ---
 title: Create new collection and series in ArchivesSpace
+hide:
+  - toc
 ---
 
 # Create new collection in ArchivesSpace
@@ -8,7 +10,7 @@ For users familiar with ArchivesSpace, this step should be straightforward. Go t
 
 In the example below, our `Ref ID` is `/repositories/3/resources/1821`.
 
-![Example collection record](../example-collection-screenshot.png){ align=left }
+![Example collection record](../img/example-collection-screenshot.png){ align=left }
 
 # Create new top-level series in ArchivesSpace
 
@@ -20,4 +22,4 @@ In our example collection, we have three series with the following `Ref IDs`.
 - Correspondence, 2002-2003: `/repositories/3/archival_objects/326201`
 - Financial records, 2001-2003: `/repositories/3/archival_objects/326202`
 
-![Example series record](../example-series-screenshot.png){ align=left }
+![Example series record](../img/example-series-screenshot.png){ align=left }

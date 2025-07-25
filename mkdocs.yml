@@ -27,7 +27,7 @@ nav:
       - Matching names script: python-scripts/matching-names.md
 theme:
   name: material
-  logo: bluejay.png
+  logo: img/bluejay.png
   language: en
   features:
     - navigation.footer

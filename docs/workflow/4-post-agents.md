@@ -1,5 +1,7 @@
 ---
 title: Post new agents to ArchivesSpace
+hide:
+  - toc
 ---
 
 # Post new agents to ArchivesSpace
