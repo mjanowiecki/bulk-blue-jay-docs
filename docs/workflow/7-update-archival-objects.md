@@ -10,6 +10,7 @@ While there are numerous methods you could use to replace entity names with URIs
 
 # Run [`findAndReplaceStringsWithURIs.py`](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/helping-scripts/findAndReplaceStringsWithURIs.py)
 
+
 ## Preparation
 
 1. Create a new folder somewhere on your computer. In this example, I created a folder called `entitiesURIs` on my Desktop.
@@ -18,6 +19,7 @@ While there are numerous methods you could use to replace entity names with URIs
 4. Put a copy of your archival-object-template in your `helping-scripts` folder.
 
 ![EntitiesURIs folder](../img/entity-folder.png){ align=left }
+
 
 ## Running the script
 

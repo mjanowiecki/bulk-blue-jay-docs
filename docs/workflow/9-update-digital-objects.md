@@ -17,7 +17,9 @@ While there are numerous methods you could use to replace entity names with URIs
 3. Find your `alreadyExistingEntities.csv` and also add it to the folder.
 4. Put a copy of your archival-object-template in your `helping-scripts` folder.
 
+
 ![EntitiesURIs folder](../img/entity-folder.png){ align=left }
+
 
 ## Running the script
 
