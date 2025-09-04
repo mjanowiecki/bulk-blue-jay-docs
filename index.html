@@ -592,11 +592,11 @@
   
   
     <li class="md-nav__item">
-      <a href="workflow/7-post-digital-objects/" class="md-nav__link">
+      <a href="workflow/7-update-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    7. Post digital objects
+    7. Update archival object template
     
   </span>
   
@@ -614,11 +614,11 @@
   
   
     <li class="md-nav__item">
-      <a href="workflow/8-update-archival-objects/" class="md-nav__link">
+      <a href="workflow/8-post-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    8. Update archival object template
+    8. Post archival objects
     
   </span>
   
@@ -636,11 +636,33 @@
   
   
     <li class="md-nav__item">
-      <a href="workflow/9-post-archival-objects/" class="md-nav__link">
+      <a href="workflow/9-update-digital-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    9. Post archival objects
+    9. Update digital object template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="workflow/10-post-digital-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Post digital objects
     
   </span>
   
@@ -1076,7 +1098,8 @@
 <h1 id="bulk-blue-jay-workflow">Bulk Blue Jay Workflow<a class="headerlink" href="#bulk-blue-jay-workflow" title="Permanent link">&para;</a></h1>
 <p>The Bulk Blue Jay Workflow (BBJW) is workflow via Python scripts to ingest full collections via <a href="https://archivesspace.github.io/archivesspace/api/#archivesspace-rest-api">ArchivesSpace REST API</a>.</p>
 <h2 id="background-of-project">Background of project<a class="headerlink" href="#background-of-project" title="Permanent link">&para;</a></h2>
-<p><em>Coming soon!</em></p>
+<p>This workflow was developed at the <a href="https://www.library.jhu.edu/">Johns Hopkins University Sheridan Libraries</a> in 2022-2023 as a solution to the problem of how to ingest file-level metadata into the collection finding aid in ArchivesSpace from a spreadsheet with over 55,000 rows of complex metadata. The workflow contains a set of CSV templates for archival objects, digital objects, top containers, subjects, agent records of each type, plus a corresponding set of Python scripts and instructions for uploading and correctly linking the metadata contained in those CSV spreadsheets via the ArchivesSpace API.</p>
+<p>We developed this workflow for the <a href="https://archivesspace.library.jhu.edu/repositories/3/resources/1485">Barbara A. Mikulski papers</a>, a congressional collection that documents the political career of Senator Barbara Mikulski. At 1093 boxes and over 55,000 folders, the Mikulski papers are the largest manuscript collection at our institution. The collection finding aid contains file-level metadata on access restrictions, agents, subjects, and container, all necessary for this archival processing project and made possible at this large scale via this workflow.</p>
 <h2 id="what-this-project-does">What this project does<a class="headerlink" href="#what-this-project-does" title="Permanent link">&para;</a></h2>
 <p>This project uses CSV spreadsheets and Python scripts to upload entities (like Subjects, Archival Objects, etc.) associated with a collection to ArchivesSpace via REST API.</p>
 <h2 id="our-team">Our team<a class="headerlink" href="#our-team" title="Permanent link">&para;</a></h2>

@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../8-update-archival-objects/">
+        <link rel="prev" href="../8-post-archival-objects/">
       
       
-        <link rel="next" href="../../csv-templates/archival-object-template/">
+        <link rel="next" href="../10-post-digital-objects/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Post new archival objects to ArchivesSpace - Bulk Blue Jay Workflow</title>
+        <title>Update digital objects template with URIs - Bulk Blue Jay Workflow</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#steps" class="md-skip">
+        <a href="#update-archival-object-template-with-uris" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Post new archival objects to ArchivesSpace
+              Update digital objects template with URIs
             
           </span>
         </div>
@@ -504,11 +504,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../7-post-digital-objects/" class="md-nav__link">
+      <a href="../7-update-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    7. Post digital objects
+    7. Update archival object template
     
   </span>
   
@@ -526,11 +526,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../8-update-archival-objects/" class="md-nav__link">
+      <a href="../8-post-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    8. Update archival object template
+    8. Post archival objects
     
   </span>
   
@@ -554,56 +554,42 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    9. Post archival objects
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    9. Post archival objects
+    9. Update digital object template
     
   </span>
   
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+              
+            
+              
+                
   
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Steps
-    </span>
-  </a>
+    <li class="md-nav__item">
+      <a href="../10-post-digital-objects/" class="md-nav__link">
+        
   
-</li>
-      
-    </ul>
+  <span class="md-ellipsis">
+    10. Post digital objects
+    
+  </span>
   
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -947,23 +933,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -984,16 +955,26 @@
   
 
 
-  <h1>9. Post archival objects</h1>
-
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For help running scripts, please see <a href="../../python-scripts/running-the-scripts/">Running the scripts</a> help page.</p>
-</div>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h1 id="update-archival-object-template-with-uris">Update archival object template with URIs<a class="headerlink" href="#update-archival-object-template-with-uris" title="Permanent link">&para;</a></h1>
+<p>While there are numerous methods you could use to replace entity names with URIs in the <code>digital-object-template.csv</code>, we have a script available that does this automatically using spreadsheets you already have. To do this method, see the steps below.</p>
+<h1 id="run-findandreplacestringswithurispy">Run <a href="https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/helping-scripts/findAndReplaceStringsWithURIs.py"><code>findAndReplaceStringsWithURIs.py</code></a><a class="headerlink" href="#run-findandreplacestringswithurispy" title="Permanent link">&para;</a></h1>
+<h2 id="preparation">Preparation<a class="headerlink" href="#preparation" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Use <code>postArchivalObjects.py</code> to post archival objects in <code>archival-object-template.csv</code> to ArchivesSpace.</li>
+<li>Create a new folder somewhere on your computer. In this example, I created a folder called <code>entitiesURIs</code> on my Desktop.</li>
+<li>Put all of your log CSV files for agents and subjects in the new folder. </li>
+<li>Find your <code>alreadyExistingEntities.csv</code> and also add it to the folder.</li>
+<li>Put a copy of your archival-object-template in your <code>helping-scripts</code> folder.</li>
 </ol>
+<p><img align="left" alt="EntitiesURIs folder" src="../../img/entity-folder.png" /></p>
+<h2 id="running-the-script">Running the script<a class="headerlink" href="#running-the-script" title="Permanent link">&para;</a></h2>
+<ol>
+<li>In your terminal, navigate to your <code>helping-scripts</code> folder.</li>
+<li>Run the following command in your terminal, adjusting the filename and directory path to match what you have.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>python findAndReplaceStringsWithURIs.py -f digital-object-copy.csv -d /Users/michelle/Desktop/entitiesURIs
+</code></pre></div>
+<h2 id="reviewing-your-results">Reviewing your results<a class="headerlink" href="#reviewing-your-results" title="Permanent link">&para;</a></h2>
+<p>A new spreadsheet beginning with <code>wReplacements_</code> should have been created in your <code>helping-script</code> folder. This is a copy of your archival-object-template with all names replaced with their URIs. I'd recommend visually scanning the relevant columns (<code>linked_agents</code>, <code>subjects</code>) to make sure no strings remain. Once verified, this spreadsheet should be the one used in step 10.</p>
 
 
 
@@ -1036,7 +1017,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../8-update-archival-objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 8. Update archival object template">
+          <a href="../8-post-archival-objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 8. Post archival objects">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1046,20 +1027,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                8. Update archival object template
+                8. Post archival objects
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../csv-templates/archival-object-template/" class="md-footer__link md-footer__link--next" aria-label="Next: Archival objects">
+          <a href="../10-post-digital-objects/" class="md-footer__link md-footer__link--next" aria-label="Next: 10. Post digital objects">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Archival objects
+                10. Post digital objects
               </div>
             </div>
             <div class="md-footer__button md-icon">

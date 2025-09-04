@@ -497,11 +497,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/7-post-digital-objects/" class="md-nav__link">
+      <a href="../../workflow/7-update-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    7. Post digital objects
+    7. Update archival object template
     
   </span>
   
@@ -519,11 +519,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/8-update-archival-objects/" class="md-nav__link">
+      <a href="../../workflow/8-post-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    8. Update archival object template
+    8. Post archival objects
     
   </span>
   
@@ -541,11 +541,33 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/9-post-archival-objects/" class="md-nav__link">
+      <a href="../../workflow/9-update-digital-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    9. Post archival objects
+    9. Update digital object template
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workflow/10-post-digital-objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Post digital objects
     
   </span>
   
@@ -1033,12 +1055,13 @@
 <p>Place a copy of your template CSV (<code>subject-template.csv</code>) and your script export CSV (<code>allSubjects.csv</code>) in the folder <code>helping-scripts</code> in your repository.</p>
 <h2 id="running-the-script">Running the script<a class="headerlink" href="#running-the-script" title="Permanent link">&para;</a></h2>
 <p>Determine which column in each spreadsheet contain the name of entity. In our example, the name of the subject is in a column called <code>term</code> for <code>subject-template.csv</code> and in a column called <code>title</code> for <code>allSubjects.csv</code>. We want these two column to match, so we are going to quickly rename <code>title</code> with <code>term</code> in <code>allSubjects.csv</code> and save.</p>
-<p>After that, we will run the script. Open your terminal and <code>cd</code> into the <code>helping-scripts</code> folder and type the following. </p>
+<p>After that, we will run the script <a href="https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/helping-scripts/matchingNames.py"><code>matchingNames.py</code></a>. Open your terminal and <code>cd</code> into the <code>helping-scripts</code> folder and type the following. </p>
 <div class="highlight"><pre><span></span><code>python matchingNames.py -f subject-template.csv -f2 allSubjects.csv -c term
 </code></pre></div>
 <p>In the command, <code>-f</code> will always be your template spreadsheet and <code>-f2</code> will always be your export spreadsheet, while <code>-c</code> will be the name of your shared column header. Type the entire name of the spreadsheets, including any datetime stamp.</p>
 <h2 id="reviewing-results">Reviewing results<a class="headerlink" href="#reviewing-results" title="Permanent link">&para;</a></h2>
-<p>The script should produce a new CSV called <code>subject-template-matches.csv</code> which is a copy of your <code>subject-template.csv</code> with rows from <code>allSubjects.csv</code> inserted if the names matched. Reviewing this, any row without additional information did not match an existing entity, but rows with additional information from <code>allSubjects.csv</code> did match based on names.</p>
+<p>The script should produce a new CSV called <code>subject-template-matches.csv</code> which is a copy of your <code>subject-template.csv</code> with rows from <code>allSubjects.csv</code> inserted if the names matched. Reviewing this, any row without additional information did not match an existing entity, but rows with additional information from <code>allSubjects.csv</code> did match based on names. You can also look at the column <code>_merge</code> to determine which entities already exist - <code>left_only</code> means a match was not found while <code>both</code> means a match was found.</p>
+<p><img align="left" alt="Example match CSV" src="../../img/example-subject-matching.png" /></p>
 <p>Ad this point, we also recommend briefly visually reviewing both original spreadsheet to see if any matches with slight spelling differences were missed (like <code>Cat</code> and <code>Cats</code>) and manually correcting them if so.</p>
 <p>If any subjects matched (aka already exist), delete their rows from <code>subject-template.csv</code> and add their names and URIs to <code>alreadyExistingEntities.csv</code>. This should leave you with a <code>subject-template.csv</code> that only contains new subjects.</p>
 
