@@ -10,7 +10,8 @@ For users familiar with ArchivesSpace, this step should be straightforward. Go t
 
 In the example below, our `Ref ID` is `/repositories/3/resources/1821`.
 
-![Example collection record](../img/example-collection-screenshot.png){ align=left }  
+![Example collection record](../img/example-collection-screenshot.png){ align=left }
+<br>
 
 # Create new top-level series in ArchivesSpace
 
