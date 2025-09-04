@@ -6,11 +6,17 @@ hide:
 
 # How to fill out archival object template CSV
 
-:material-file-document: [Download blank template]()
+:material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/archival-object-template-blank.csv)
 
-:material-file-document-check-outline: [Download example template]()
+:material-file-document-check-outline: [Download example template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/archival-object-template-example.csv)
 
 ## :octicons-light-bulb-16: Example of completed `archival_objects.csv`
+
+| title                         | parent                                   | position | repository      | resource                       | level | publish | suppressed | restrictions\_apply | repository\_processing\_note                                                                                                        | dates                                                                  | extents                                                                                               | linked\_agents                                                                     | subjects                       | singlepart\_note                                                                                                                                | multipart\_note                                                                         | instances                                                                                                         |
+|-------------------------------|------------------------------------------|----------|-----------------|--------------------------------|-------|---------|------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| Audio recordings of blue jays | /repositories/3/archival\_objects/326200 | 1        | /repositories/3 | /repositories/3/resources/1821 | file  | True    | False      | False               |                                                                                                                                     | label==creation;;date\_type==inclusive;;begin==2003\-03;;end==2003\-12 | number==26;;portion==whole;;extent\_type==Items;;container\_summary==26 cassettes                     | role==creator;;ref==/agents/people/6453\|\|role==creator;;ref==/agents/people/6454 | /subjects/2437\|/subjects/2727 |                                                                                                                                                 | type==arrangement;;publish==True;;content==Arranged by identified bird\.                |                                                                                                                   |
+| Blue jay feathers             | /repositories/3/archival\_objects/326200 | 3        | /repositories/3 | /repositories/3/resources/1821 | file  | True    | False      | False               | Please note that the actual feathers are held by the Department of Biology and cannot be accessed\. This file is photographs only\. | label==creation;;date\_type==single;;begin==2003                       | number==175;;portion==whole;;extent\_type==photographic\_prints;;container\_summary==175 color photos | role==creator;;ref==/agents/people/6453\|\|role==creator;;ref==/agents/people/6454 | /subjects/2730\|/subjects/2727 | type==physdesc;;publish==True;;content==175 photographs of 57 feathers\.                                                                        | type==arrangement;;publish==True;;content==Arranged by feather identifier\.             |                                                                                                                   |
+| Research data and papers      | /repositories/3/archival\_objects/326200 | 4        | /repositories/3 | /repositories/3/resources/1821 | file  | True    | False      | False               |                                                                                                                                     | label==creation;;date\_type==inclusive;;begin==2001;;end==2004         | number==\.835;;container\_summary==4 folders;;portion==whole;;extent\_type==cubic\_feet               | role==creator;;ref==/agents/corporate\_entities/2018                               |                                | type==materialspec;;publish==True;;content==Includes drafts of the paper, “Are blue jays the rudest birds in Maryland? A scientific approach\.” | type==acqinfo;;publish==True;;content==Processed by Lauren McAwesomeSauce in May 2025\. | ref==/repositories/3/top\_containers/24636;;instance\_type==mixed\_materials;;type\_2==folder;;indicator\_2==1\-4 |
 
 
 
@@ -29,11 +35,13 @@ hide:
     - Allows multiple values: :x: False
     - Data type: [Integer](../workflow/2-fill-out-templates.md/#integers)
 
-??? note "other_level"
-    - ArchivesSpace field equivalent: Other Level
-    - Required in CSV: :x: False
-    - Allows multiple values: :x: False
-    - Data type: [String](../workflow/2-fill-out-templates.md/#string)
+
+??? note "resource"
+    - ArchivesSpace field equivalent: *Collection ref*
+    - Required in CSV: :white_check_mark: True
+    - Allows multiple values: :x: False 
+    - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
+
 
 ### Columns related to `Basic Information`
 ??? note "title"
@@ -41,12 +49,6 @@ hide:
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
     - Data type: [String](../workflow/2-fill-out-templates.md/#string)
-
-??? note "resource"
-    - ArchivesSpace field equivalent:
-    - Required in CSV: :white_check_mark: True
-    - Allows multiple values: :x: False 
-    - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
 
 ??? note "component_id"
     - ArchivesSpace field equivalent: Component Unique Identifier
@@ -154,30 +156,30 @@ hide:
     - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type) 
     - Allowed subfields
         - portion
-            - ArchivesSpace field equivalent:
+            - ArchivesSpace field equivalent: Portion
             - Required in field: :white_check_mark: True
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Extent Portion
         - number
-            - ArchivesSpace field equivalent:
+            - ArchivesSpace field equivalent: Number
             - Required in field: :white_check_mark: True
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)
-        - type
-            - ArchivesSpace field equivalent:
+        - extent_type
+            - ArchivesSpace field equivalent: Type
             - Required in field: :white_check_mark: True
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Extent Extent Type
         - container_summary
-            - ArchivesSpace field equivalent:
+            - ArchivesSpace field equivalent: Container Summary
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - physical_details
-            - ArchivesSpace field equivalent:
+            - ArchivesSpace field equivalent: Physical Details
             - Required in field: :x: False
         -    Data type: String
         - dimensions
-            - ArchivesSpace field equivalent:
+            - ArchivesSpace field equivalent: Dimensions
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)
-    - Example: `number==.167;;container_summery==1 folder;;portion==whole;;type==cubic feet`
+    - Example: `number==.167;;container_summary==1 folder;;portion==whole;;extent_type==cubic_feet`
 
 ### Columns related to `Agent Links`
 ??? note "linked_agents"
@@ -271,7 +273,7 @@ Single type notes
             - ArchivesSpace field equivalent: Content
             - Required in field: :white_check_mark: True
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)
-    - Example: `type==materialspec;;publish==True;;content==Includes drafts of the paper, “Are blue jays the rudest birds in Maryland? A scientific approach.”||type==acqinfo;;publish==True;;content==Processed by Lauren McAwesomeSauce in May 2025.`
+    - Example: `type==materialspec;;publish==True;;content==Includes drafts of the paper, “Are blue jays the rudest birds in Maryland? A scientific approach.”`
     - Additional information: The note and subnote both receive their publish status from the field `publish`. At this time, the content subfield only accepts string/free-text values.
 
 ??? note "singlepart_note"
@@ -302,31 +304,35 @@ Single type notes
     - Allows multiple values: :white_check_mark: True
     - Data type: [Subfield type](../workflow/2-fill-out-templates.md/#subfield-type)
     - Allowed subfields:
-        - type
+        - instance_type
             - ArchivesSpace field equivalent: Type
             - Required in field: :white_check_mark: True
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) -Instance Instance Type
-        - top_container
-            - ArchivesSpace field equivalent: Type
+        - is_representative
+            - ArchivesSpace field equivalent: Is Representative?
+            - Required in field: :x: False
+            - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
+        - ref
+            - ArchivesSpace field equivalent: Top Container
             - Required in field: :white_check_mark: True
             - Data type: [Ref](../workflow/2-fill-out-templates.md/#ref)
-        - child_type
+        - type_2
             - ArchivesSpace field equivalent: Child Type
             - Required in field: :x: False
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Container Type
-        - child_indicator
+        - indicator_2
             - ArchivesSpace field equivalent: Child Indicator
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)
-        - child_container_barcode
+        - barcode_2
             - ArchivesSpace field equivalent: Child Container Barcode
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)
-        - grandchild_type
+        - type_3
             - ArchivesSpace field equivalent: Grandchild Type
             - Required in field: :x: False
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Container Type
-        - grandchild_indicator
+        - indicator_3
             - ArchivesSpace field equivalent: Grandchild Indicator
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)

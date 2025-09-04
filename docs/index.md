@@ -9,7 +9,9 @@ The Bulk Blue Jay Workflow (BBJW) is workflow via Python scripts to ingest full 
 
 ## Background of project
 
-*Coming soon!*
+This workflow was developed at the [Johns Hopkins University Sheridan Libraries](https://www.library.jhu.edu/) in 2022-2023 as a solution to the problem of how to ingest file-level metadata into the collection finding aid in ArchivesSpace from a spreadsheet with over 55,000 rows of complex metadata. The workflow contains a set of CSV templates for archival objects, digital objects, top containers, subjects, agent records of each type, plus a corresponding set of Python scripts and instructions for uploading and correctly linking the metadata contained in those CSV spreadsheets via the ArchivesSpace API.
+
+We developed this workflow for the [Barbara A. Mikulski papers](https://archivesspace.library.jhu.edu/repositories/3/resources/1485), a congressional collection that documents the political career of Senator Barbara Mikulski. At 1093 boxes and over 55,000 folders, the Mikulski papers are the largest manuscript collection at our institution. The collection finding aid contains file-level metadata on access restrictions, agents, subjects, and container, all necessary for this archival processing project and made possible at this large scale via this workflow.
 
 ## What this project does
 

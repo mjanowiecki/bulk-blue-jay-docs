@@ -30,7 +30,7 @@ For some paired fields, which only make sense together, like `authority_id` and 
 
 ### :fontawesome-regular-keyboard: Encoding
 - If given the option by your spreadsheet editor, always encode your CSV as UTF-8.
-- If possible, format all of your cells as `Plain Text` or `Text` before saving/exporting as a CSV. This will prevent automatic formatting in most spreadsheet editors.
+- If possible, format all of your cells as `Plain Text` or `Text` and quote all text before saving/exporting as a CSV. This will prevent automatic formatting in most spreadsheet editors.
 
 ### :fontawesome-solid-spell-check: Diacritics
 Do not simply enter diacritics and other special characters into your spreadsheets, as these cannot be properly read by ArchivesSpace for some horrible reason. Instead, use HTML character codes, which can be found online and have the pattern $#\[number\].
@@ -38,8 +38,13 @@ Do not simply enter diacritics and other special characters into your spreadshee
 ### :material-table-column: Column rules
 
 - Columns can be in any order in the template.
-- Unless required, unused columns do not need to be included in your template.
-- Column headings must be spelled exactly as prescripted in the template with the same capitalization.
+- Unless required, unused columns do not need to be included in your template. However, keeping unused columns will not negatively impact the scripts.
+- Column headings must be spelled exactly as prescribed in the template with the same capitalization.
+
+### :material-table-row: Row rules
+
+- Rows can be in any order in the template.
+- Delete all blank rows before ingest.
 
 ## Data Types
 
@@ -48,8 +53,22 @@ The data types given in the CSV template indicate what type of value is needed b
 ### :fontawesome-solid-keyboard: String
 Any characters can be entered in this cell, including numbers, letters, and symbols. For instance, a URL, barcode, or a paragraph of text would be accepted as string values.
 
+Examples:
+
+- `http://id.worldcat.org/fast/834963`
+- `41151034444400`
+- `Digital photographs of blue jay`
+
+Repeatable string fields are separated by a single pipe `|`.
+
 ### :octicons-number-16: Integers
 Any positive whole numbers, like 1, 2, 3, 4, etc.
+
+Examples:
+
+- `4`
+- `14000`
+- `11`
 
 ### :fontawesome-solid-list: Controlled List
 
@@ -66,16 +85,16 @@ Only values from the specified controlled list can be used. To find see the acce
 
 For instance, if the Controlled List given for a column is `Subject Source`, acceptable values would include:
 
-- :octicons-check-circle-16: aat
-- :octicons-check-circle-16: fast
-- :octicons-check-circle-16: local
+- :octicons-check-circle-16: `aat`
+- :octicons-check-circle-16: `fast`
+- :octicons-check-circle-16: `local`
 
 Values like the following, containing typos or different capitalization, will not work properly.
 
-- :octicons-x-circle-16: FAST
-- :octicons-x-circle-16: Medical Subject Headings
-- :octicons-x-circle-16: gmgpc
-- :octicons-x-circle-16: Aat
+- :octicons-x-circle-16: `FAST`
+- :octicons-x-circle-16: `Medical Subject Headings`
+- :octicons-x-circle-16: `gmgpc`
+- :octicons-x-circle-16: `Aat`
 
 ### :material-checkbox-outline: Boolean
 
@@ -85,13 +104,22 @@ The only accepted values in these fields are `TRUE` or `FALSE`.
 
 For ingest, the only accepted values in these fields are URIs (aka Refs) from your local ArchivesSpace instance. Do not include the "base" component of the URI.
 
-Examples:
+Examples (after replacement in step 7 & 9):
 
 - `/agents/corporate_entities/879`
-- `/subjects/339`
-- `/repositories/3/archival_objects/84637`
+- `/subjects/339|/subjects/142`
+- `/repositories/3/archival_objects/84724`
+- `instance_type==mixed_materials;;ref==/repositories/3/top_containers/14557;;type_2==folder`
 
-If the URI has not yet been created, please type the exact name or title of the object instead. These will be replaced by their URIs in step 8.
+If the URI has not yet been created, please type the exact name of the subject or agent instead. For top containers in archival object instances, use the barcode in the `ref` field if the top container does not exist yet. The names and barcodes will be replaced by their URIs in step 7 and 9.
+
+Examples (before replacement in step 7 & 8):
+- `Johns Hopkins University. Academic Council of Homewood Faculties`
+- `Academic libraries|ephemera (general object genre)`
+- `Departmental Review Committee, 1972-1973`
+- `instance_type==mixed_materials;;ref==31151034438071;;type_2==folder`
+
+Repeatable ref fields are separated by a single pipe `|`. Be sure there are no spaces surrounding the pipe, this will break the script.
 
 ### :material-format-list-group-plus: Subfield type
 
@@ -99,7 +127,7 @@ This data type is specific to the Big Blue Jay workflow templates and helps us r
 
 `role==creator;;relator==pht;;ref==/agents/corporate_entities/388`
 
-If the field needs to be repeated, each field is separated by double pipes (`||`). For instance:
+If the field needs to be repeated, each field is separated by double pipes `||`. For instance:
 
 `role==creator;;relator==pht;;ref==/agents/corporate_entities/388||role==creator;;relator==edt;;ref==/agents/corporate_entities/698`
 
