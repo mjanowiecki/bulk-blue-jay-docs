@@ -18,8 +18,8 @@ While there are numerous methods you could use to replace entity names with URIs
 4. Put a copy of your archival-object-template in your `helping-scripts` folder.
 
 
-![EntitiesURIs folder](../img/entity-folder.png){ align=left }  
-
+![EntitiesURIs folder](../img/entity-folder.png){ align=left }
+<br>
 
 ## Running the script
 
