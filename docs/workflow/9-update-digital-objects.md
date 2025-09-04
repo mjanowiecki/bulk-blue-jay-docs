@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Update archival object template with URIs
+# Update digital object template with URIs
 
 While there are numerous methods you could use to replace entity names with URIs in the `digital-object-template.csv`, we have a script available that does this automatically using spreadsheets you already have. To do this method, see the steps below.
 
@@ -13,9 +13,9 @@ While there are numerous methods you could use to replace entity names with URIs
 ## Preparation
 
 1. Create a new folder somewhere on your computer. In this example, I created a folder called `entitiesURIs` on my Desktop.
-2. Put all of your log CSV files for agents and subjects in the new folder. 
+2. Put all of your log CSV files for agents and subjects in the new folder. Do not include top containers.
 3. Find your `alreadyExistingEntities.csv` and also add it to the folder.
-4. Put a copy of your archival-object-template in your `helping-scripts` folder.
+4. Put a copy of your digital-object-template in your `helping-scripts` folder.
 
 
 ![EntitiesURIs folder](../img/entity-folder.png){ align=left }

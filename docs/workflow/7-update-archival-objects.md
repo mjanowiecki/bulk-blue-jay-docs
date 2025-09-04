@@ -14,7 +14,7 @@ While there are numerous methods you could use to replace entity names with URIs
 ## Preparation
 
 1. Create a new folder somewhere on your computer. In this example, I created a folder called `entitiesURIs` on my Desktop.
-2. Put all of your log CSV files for agents and subjects in the new folder. 
+2. Put all of your log CSV files for agents, top containers, and subjects in the new folder. 
 3. Find your `alreadyExistingEntities.csv` and also add it to the folder.
 4. Put a copy of your archival-object-template in your `helping-scripts` folder.
 
