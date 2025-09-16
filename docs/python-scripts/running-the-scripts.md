@@ -56,7 +56,6 @@ python postPeopleAgents.py -f collection-10-people.csv -p True
 To edit production server, enter secret filename:
 Editing Stage
 ```
-
 ## Recommendations for using POST scripts
 
 1. First test your script by creating the JSON files and reviewing them manually for any obvious errors. While you don't have to look at every single file, select a representative sample of 5 or more to review. I would recommend, however, running all of your expected data in the script to see if any errors are triggered.
@@ -65,9 +64,9 @@ Editing Stage
 
 3. Once you feel confident about the results of your script/data in the sandbox, talk with whoever is response for the technical maintenance of your ArchivesSpace instances and figure out a date when you can run the script against production. Our technical folks always back up the most recent save of our Production instance directly before we run POST scripts.
 
-4. Run your script in Production, preferably after regular working hours to improve running times and prevent any interruptions if any errors occur. After the script completes, Review both the log for errors and review a representative sample on the sandbox interface to ensure the update worked as expected. To avoid problems over the weekend/breaks, I would NOT recommend running any POST script against Production on Friday evenings or right before holidays.
+4. Run your script in Production, preferably after regular working hours to improve running times and prevent service interruptions if any errors occur. After the script completes, review both the log for errors and review a representative sample on the Production interface to ensure the update worked as expected. To avoid problems over the weekend/breaks, we do NOT recommend running any POST script against Production on Friday evenings or right before holidays.
 
-## Errors
+## Common errors
 
 ### JSONDecodeError
 
@@ -84,4 +83,8 @@ Meaning of common error codes:
 - `500: Internal Server Error` -- Typically, this is not your fault! Talk to your tech folks. Mostly likely your server is out of memory.
 - `503: Service Unavailable` --  Typically, this is not your fault! Talk to your tech folks.
 
-### 
+### KeyError or IndexError
+
+- `KeyError` will most likely occur in these scripts if when the script asks for a value from a specific *required* column and that column name does not exist in your spreadsheet. For instance, if you have a typo like `primarry_name` in your corporate agent spreadsheet, this will return a key error when the script runs line `primary_name = row['primary_name']`.
+
+- `IndexError` will most likely occur in your script when you do not properly format your subfield type entries with `==`, `;;`, or `||`. For instance, `role=creator;;relator==pht;;ref==/agents/corporate_entities/388` will not be able to separate the field `role` from its value `creator` because there is only a single `=` instead of `==`, returning an error.

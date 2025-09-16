@@ -52,6 +52,10 @@ This project uses CSV spreadsheets and Python scripts to upload entities (like S
 
 Throughout this documentation, the Blue Jay Example Collection is used to help explain our workflow in greater detail. This collection is entirely fictitious and does not represent best archival practices. Instead, the examples were formulated for their ability to clarify data entry and workflows, rather adherence to best practices in DACS or other descriptive practices.
 
+## Contact us
+
+Have questions or encounter an error? Feel free to get in contact with one of us with the emails provided in our Johns Hopkins profile pages (linked above). We will try to get back with you as quickly as possible!
+
 ## Copyright
 
 This documentation is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).

@@ -32,6 +32,9 @@ For some paired fields, which only make sense together, like `authority_id` and 
 - If given the option by your spreadsheet editor, always encode your CSV as UTF-8.
 - If possible, format all of your cells as `Plain Text` or `Text` and quote all text before saving/exporting as a CSV. This will prevent automatic formatting in most spreadsheet editors.
 
+!!! Tip
+    We love [LibreOffice Calc](https://www.libreoffice.org/discover/calc/) for being great with encoding and text formatting, although we will admit that [Google Sheets](https://workspace.google.com/products/sheets/) has a far better spell check!
+
 ### :fontawesome-solid-spell-check: Diacritics
 Do not simply enter diacritics and other special characters into your spreadsheets, as these cannot be properly read by ArchivesSpace for some horrible reason. Instead, use HTML character codes, which can be found online and have the pattern $#\[number\].
 
@@ -98,7 +101,7 @@ Values like the following, containing typos or different capitalization, will no
 
 ### :material-checkbox-outline: Boolean
 
-The only accepted values in these fields are `TRUE` or `FALSE`.
+The only accepted values in these fields are `TRUE` or `FALSE`. Do not write in lowercase or title case.
 
 ### :material-link: Ref
 
@@ -123,7 +126,9 @@ Repeatable ref fields are separated by a single pipe `|`. Be sure there are no s
 
 ### :material-format-list-group-plus: Subfield type
 
-This data type is specific to the Big Blue Jay workflow templates and helps us represent fields with multiple subfields. Each subfield is linked to its value by "==". For instance, the `linked_agents` field has three subfields: `role`, `relator`, and `ref`. This means a corporate entity with the role of creator and the relator would be formatted as followed:
+This data type is specific to the Big Blue Jay workflow templates and helps us represent fields with multiple subfields. Each subfield is linked to its value by `==` and each subfield and its value is separated from the other subfields with `;;`.
+
+For instance, the `linked_agents` field has three subfields: `role`, `relator`, and `ref`. This means a corporate entity with the role value of `creator`, a relator value of `pht`, and an ref value of `/agents/corporate_entities/388` would be formatted as followed:
 
 `role==creator;;relator==pht;;ref==/agents/corporate_entities/388`
 
@@ -131,4 +136,12 @@ If the field needs to be repeated, each field is separated by double pipes `||`.
 
 `role==creator;;relator==pht;;ref==/agents/corporate_entities/388||role==creator;;relator==edt;;ref==/agents/corporate_entities/698`
 
-The subfields can be in any order in the spreadsheet. Subfields that are not required do not need to be included in spreadsheet.
+The subfields can be in any order within a single field area. These entries are equally as valid and do not have be consistent across a single column.
+
+- `relator==pht;;ref==/agents/corporate_entities/388;;role==creator`
+- `role==creator;;relator==pht;;ref==/agents/corporate_entities/388`
+
+Optional subfields that are not used (i.e. not filled out) should not be included in your entry. For instance, if you do not have a relator value (which is optional) for a specific archival object, do not include that subfield in that particular linked agent cell. Please note, however, that 
+required subfields must be present with a valid value.
+
+- `role==subject;;ref==/agents/corporate_entities/388`

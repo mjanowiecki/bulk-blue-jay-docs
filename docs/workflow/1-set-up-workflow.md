@@ -12,7 +12,7 @@ To use this workflow, there are a few details to configure on your local compute
 
 To fully run this workflow, you must be able to run the Python scripts contained [archivesspace-collection-ingest](https://github.com/mjanowiecki/archivesspace-collection-ingest) from your local computer. The easiest way to do this is by cloning [archivesspace-collection-ingest](https://github.com/mjanowiecki/archivesspace-collection-ingest). Be sure to install all of the required packages listed in `requirements.txt` in the repository.
 
-For more instructions on cloning, see [:simple-github: GitHub Docs: Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+For more instructions on cloning, see [:simple-github: GitHub Docs: Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). If you'd like to contribute any code back to this project, feel free to [Fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository) instead!
 
 ## 2. Export `enumerations.csv`
 
