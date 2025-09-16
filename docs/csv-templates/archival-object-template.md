@@ -8,7 +8,9 @@ hide:
 
 :material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/archival-object-template-blank.csv)
 
-:material-file-document-check-outline: [Download example template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/archival-object-template-example.csv)
+:material-file-document-check-outline: [Download example template (uri)](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/archival-object-template-uri-example.csv)
+
+:material-file-document-check-outline: [Download example template (string](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/archival-object-template-string-example.csv)
 
 ## :octicons-light-bulb-16: Example of completed `archival_objects.csv`
 

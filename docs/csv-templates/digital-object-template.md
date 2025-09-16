@@ -6,7 +6,9 @@ hide:
 # How to fill out digital object template CSV
 :material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/digital-object-template-blank.csv)
 
-:material-file-document-check-outline: [Download example template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/digital-templates/archival-object-template-example.csv)
+:material-file-document-check-outline: [Download example template (uri)](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/digital-object-template-uri-example.csv)
+
+:material-file-document-check-outline: [Download example template (string)](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/digital-object-template-string-example.csv)
 
 ## :octicons-light-bulb-16: Example of completed `digital_objects.csv`
 
