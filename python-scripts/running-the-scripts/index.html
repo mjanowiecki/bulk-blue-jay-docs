@@ -909,13 +909,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errors" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
-      Errors
+      Common errors
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Errors">
+    <nav class="md-nav" aria-label="Common errors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -928,9 +928,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#keyerror-or-indexerror" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      KeyError or IndexError
     </span>
   </a>
   
@@ -1055,13 +1055,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errors" class="md-nav__link">
+  <a href="#common-errors" class="md-nav__link">
     <span class="md-ellipsis">
-      Errors
+      Common errors
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Errors">
+    <nav class="md-nav" aria-label="Common errors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1074,9 +1074,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#keyerror-or-indexerror" class="md-nav__link">
     <span class="md-ellipsis">
-      
+      KeyError or IndexError
     </span>
   </a>
   
@@ -1161,10 +1161,10 @@ Editing Stage
 <p>Once you feel confident about the results of your script/data in the sandbox, talk with whoever is response for the technical maintenance of your ArchivesSpace instances and figure out a date when you can run the script against production. Our technical folks always back up the most recent save of our Production instance directly before we run POST scripts.</p>
 </li>
 <li>
-<p>Run your script in Production, preferably after regular working hours to improve running times and prevent any interruptions if any errors occur. After the script completes, Review both the log for errors and review a representative sample on the sandbox interface to ensure the update worked as expected. To avoid problems over the weekend/breaks, I would NOT recommend running any POST script against Production on Friday evenings or right before holidays.</p>
+<p>Run your script in Production, preferably after regular working hours to improve running times and prevent service interruptions if any errors occur. After the script completes, review both the log for errors and review a representative sample on the Production interface to ensure the update worked as expected. To avoid problems over the weekend/breaks, we do NOT recommend running any POST script against Production on Friday evenings or right before holidays.</p>
 </li>
 </ol>
-<h2 id="errors">Errors<a class="headerlink" href="#errors" title="Permanent link">&para;</a></h2>
+<h2 id="common-errors">Common errors<a class="headerlink" href="#common-errors" title="Permanent link">&para;</a></h2>
 <h3 id="jsondecodeerror">JSONDecodeError<a class="headerlink" href="#jsondecodeerror" title="Permanent link">&para;</a></h3>
 <p><code>requests.exceptions.JSONDecodeError: Expecting value: line 1 colummn 1 (char 0)</code></p>
 <p>This error typically happens when the API returns an error code instead of a JSON record, most frequently when your login fails or if the API cannot find locate the resource requested. Occasionally, this will also occur when trying to post a new entity when your server is out of memory. To see a more specific error code, delete the trailing <code>.json()</code> from the relevant request line, add a line below printing the output (for instance, <code>print(auth)</code> or <code>print(output)</code>) and rerun the script.</p>
@@ -1177,7 +1177,15 @@ Editing Stage
 <li><code>500: Internal Server Error</code> -- Typically, this is not your fault! Talk to your tech folks. Mostly likely your server is out of memory.</li>
 <li><code>503: Service Unavailable</code> --  Typically, this is not your fault! Talk to your tech folks.</li>
 </ul>
-<h3 id="_1"><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h3 id="keyerror-or-indexerror">KeyError or IndexError<a class="headerlink" href="#keyerror-or-indexerror" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>KeyError</code> will most likely occur in these scripts if when the script asks for a value from a specific <em>required</em> column and that column name does not exist in your spreadsheet. For instance, if you have a typo like <code>primarry_name</code> in your corporate agent spreadsheet, this will return a key error when the script runs line <code>primary_name = row['primary_name']</code>.</p>
+</li>
+<li>
+<p><code>IndexError</code> will most likely occur in your script when you do not properly format your subfield type entries with <code>==</code>, <code>;;</code>, or <code>||</code>. For instance, <code>role=creator;;relator==pht;;ref==/agents/corporate_entities/388</code> will not be able to separate the field <code>role</code> from its value <code>creator</code> because there is only a single <code>=</code> instead of <code>==</code>, returning an error.</p>
+</li>
+</ul>
 
 
 

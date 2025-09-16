@@ -1337,6 +1337,10 @@ For some paired fields, which only make sense together, like <code>authority_id<
 <li>If given the option by your spreadsheet editor, always encode your CSV as UTF-8.</li>
 <li>If possible, format all of your cells as <code>Plain Text</code> or <code>Text</code> and quote all text before saving/exporting as a CSV. This will prevent automatic formatting in most spreadsheet editors.</li>
 </ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We love <a href="https://www.libreoffice.org/discover/calc/">LibreOffice Calc</a> for being great with encoding and text formatting, although we will admit that <a href="https://workspace.google.com/products/sheets/">Google Sheets</a> has a far better spell check!</p>
+</div>
 <h3 id="diacritics"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M112 0C99.1 0 87.4 7.8 82.5 19.7l-66.7 160-13.3 32c-6.8 16.3.9 35 17.2 41.8s35-.9 41.8-17.2l5.2-12.3h90.7l5.1 12.3c6.8 16.3 25.5 24 41.8 17.2s24-25.5 17.2-41.8l-13.3-32-66.7-160C136.6 7.8 124.9 0 112 0m18.7 160H93.4l18.6-44.8zM256 32v192c0 17.7 14.3 32 32 32h80c44.2 0 80-35.8 80-80 0-23.1-9.8-43.8-25.4-58.4 6-11.2 9.4-24 9.4-37.6 0-44.2-35.8-80-80-80h-64c-17.7 0-32 14.3-32 32m96 64h-32V64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16m-32 64h48c8.8 0 16 7.2 16 16s-7.2 16-16 16h-48zm246.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L352 434.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0z"/></svg></span> Diacritics<a class="headerlink" href="#diacritics" title="Permanent link">&para;</a></h3>
 <p>Do not simply enter diacritics and other special characters into your spreadsheets, as these cannot be properly read by ArchivesSpace for some horrible reason. Instead, use HTML character codes, which can be found online and have the pattern $#[number].</p>
 <h3 id="column-rules"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m0 8v4h8v-4zm0 6v4h8v-4zM8 4v4h8V4z"/></svg></span> Column rules<a class="headerlink" href="#column-rules" title="Permanent link">&para;</a></h3>
@@ -1447,7 +1451,7 @@ For some paired fields, which only make sense together, like <code>authority_id<
 <li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343za8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746m1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275M6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L6.94 8 4.97 6.03a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018"/></svg></span> <code>Aat</code></li>
 </ul>
 <h3 id="boolean"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5zm-9 12-4-4 1.41-1.42L10 14.17l6.59-6.59L18 9"/></svg></span> Boolean<a class="headerlink" href="#boolean" title="Permanent link">&para;</a></h3>
-<p>The only accepted values in these fields are <code>TRUE</code> or <code>FALSE</code>.</p>
+<p>The only accepted values in these fields are <code>TRUE</code> or <code>FALSE</code>. Do not write in lowercase or title case.</p>
 <h3 id="ref"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg></span> Ref<a class="headerlink" href="#ref" title="Permanent link">&para;</a></h3>
 <p>For ingest, the only accepted values in these fields are URIs (aka Refs) from your local ArchivesSpace instance. Do not include the "base" component of the URI.</p>
 <p>Examples (after replacement in step 7 &amp; 9):</p>
@@ -1465,11 +1469,21 @@ For some paired fields, which only make sense together, like <code>authority_id<
 - <code>instance_type==mixed_materials;;ref==31151034438071;;type_2==folder</code></p>
 <p>Repeatable ref fields are separated by a single pipe <code>|</code>. Be sure there are no spaces surrounding the pipe, this will break the script.</p>
 <h3 id="subfield-type"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 14v3h-3v2h3v3h2v-3h3v-2h-3v-3m1-3v1.3c-.6-.2-1.3-.3-2-.3-1.2 0-2.4.4-3.3 1H7v-2zm-7.9 6H7v-2h5.8c-.3.6-.6 1.3-.7 2M7 7h13v2H7zM5 19h2v2H3V3h4v2H5z"/></svg></span> Subfield type<a class="headerlink" href="#subfield-type" title="Permanent link">&para;</a></h3>
-<p>This data type is specific to the Big Blue Jay workflow templates and helps us represent fields with multiple subfields. Each subfield is linked to its value by "==". For instance, the <code>linked_agents</code> field has three subfields: <code>role</code>, <code>relator</code>, and <code>ref</code>. This means a corporate entity with the role of creator and the relator would be formatted as followed:</p>
+<p>This data type is specific to the Big Blue Jay workflow templates and helps us represent fields with multiple subfields. Each subfield is linked to its value by <code>==</code> and each subfield and its value is separated from the other subfields with <code>;;</code>.</p>
+<p>For instance, the <code>linked_agents</code> field has three subfields: <code>role</code>, <code>relator</code>, and <code>ref</code>. This means a corporate entity with the role value of <code>creator</code>, a relator value of <code>pht</code>, and an ref value of <code>/agents/corporate_entities/388</code> would be formatted as followed:</p>
 <p><code>role==creator;;relator==pht;;ref==/agents/corporate_entities/388</code></p>
 <p>If the field needs to be repeated, each field is separated by double pipes <code>||</code>. For instance:</p>
 <p><code>role==creator;;relator==pht;;ref==/agents/corporate_entities/388||role==creator;;relator==edt;;ref==/agents/corporate_entities/698</code></p>
-<p>The subfields can be in any order in the spreadsheet. Subfields that are not required do not need to be included in spreadsheet.</p>
+<p>The subfields can be in any order within a single field area. These entries are equally as valid and do not have be consistent across a single column.</p>
+<ul>
+<li><code>relator==pht;;ref==/agents/corporate_entities/388;;role==creator</code></li>
+<li><code>role==creator;;relator==pht;;ref==/agents/corporate_entities/388</code></li>
+</ul>
+<p>Optional subfields that are not used (i.e. not filled out) should not be included in your entry. For instance, if you do not have a relator value (which is optional) for a specific archival object, do not include that subfield in that particular linked agent cell. Please note, however, that 
+required subfields must be present with a valid value.</p>
+<ul>
+<li><code>role==subject;;ref==/agents/corporate_entities/388</code></li>
+</ul>
 
 
 
