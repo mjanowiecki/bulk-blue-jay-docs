@@ -1314,7 +1314,7 @@
 
   <h1>2. Fill out templates</h1>
 
-<p>For your collection, create spreadsheets for the following types of entities according to our template guidelines. These templates assume that you will create the main resource for the collection manually.</p>
+<p>For your collection, create spreadsheets for the following types of entities according to our template guidelines. These templates assume that you will create the main resource and top-level series for the collection manually.</p>
 <h2 id="available-csv-templates">Available CSV templates<a class="headerlink" href="#available-csv-templates" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../csv-templates/archival-object-template/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5zM6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m9 16v-2H6v2zm3-4v-2H6v2z"/></svg></span> Archival object template</a></li>
@@ -1470,11 +1470,11 @@ For some paired fields, which only make sense together, like <code>authority_id<
 <p>Repeatable ref fields are separated by a single pipe <code>|</code>. Be sure there are no spaces surrounding the pipe, this will break the script.</p>
 <h3 id="subfield-type"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 14v3h-3v2h3v3h2v-3h3v-2h-3v-3m1-3v1.3c-.6-.2-1.3-.3-2-.3-1.2 0-2.4.4-3.3 1H7v-2zm-7.9 6H7v-2h5.8c-.3.6-.6 1.3-.7 2M7 7h13v2H7zM5 19h2v2H3V3h4v2H5z"/></svg></span> Subfield type<a class="headerlink" href="#subfield-type" title="Permanent link">&para;</a></h3>
 <p>This data type is specific to the Big Blue Jay workflow templates and helps us represent fields with multiple subfields. Each subfield is linked to its value by <code>==</code> and each subfield and its value is separated from the other subfields with <code>;;</code>.</p>
-<p>For instance, the <code>linked_agents</code> field has three subfields: <code>role</code>, <code>relator</code>, and <code>ref</code>. This means a corporate entity with the role value of <code>creator</code>, a relator value of <code>pht</code>, and an ref value of <code>/agents/corporate_entities/388</code> would be formatted as followed:</p>
+<p>For instance, the <code>linked_agents</code> field has three subfields: <code>role</code>, <code>relator</code>, and <code>ref</code>. This means a corporate entity with the role value of <code>creator</code>, a relator value of <code>pht</code>, and a ref value of <code>/agents/corporate_entities/388</code> would be formatted as followed:</p>
 <p><code>role==creator;;relator==pht;;ref==/agents/corporate_entities/388</code></p>
 <p>If the field needs to be repeated, each field is separated by double pipes <code>||</code>. For instance:</p>
 <p><code>role==creator;;relator==pht;;ref==/agents/corporate_entities/388||role==creator;;relator==edt;;ref==/agents/corporate_entities/698</code></p>
-<p>The subfields can be in any order within a single field area. These entries are equally as valid and do not have be consistent across a single column.</p>
+<p>The subfields can be in any order within a single field area. For instance, the entries below are equally valid and do not have be consistent across a single column.</p>
 <ul>
 <li><code>relator==pht;;ref==/agents/corporate_entities/388;;role==creator</code></li>
 <li><code>role==creator;;relator==pht;;ref==/agents/corporate_entities/388</code></li>
