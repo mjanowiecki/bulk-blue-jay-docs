@@ -15,7 +15,7 @@ Once you have completed the processing of your collection and have filled out th
     For help running scripts, please see [Create entity scripts](../python-scripts/running-the-scripts.md) help page.
     
 
-For each type of agent (corporate entities and persons) in your new collection, complete the following steps.
+For each type of agent (corporate entities, families, and persons) in your new collection, complete the following steps.
 
 ## :material-tie: Corporate Entities
 1. Get list of the corporate entities currently in your ArchivesSpace production instance by running [getAllCorporateEntitiesCSV.py](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/get-existing-entities/getAllCorporateEntitiesCSV.py) script to create `allCorporateEntities.csv`. The time it takes to run the script will vary based on the number of entities and your internet speed, but in general, allow at least 5 minutes per 1000 entities for GET scripts.
@@ -36,9 +36,9 @@ For each type of agent (corporate entities and persons) in your new collection, 
 4. Use [postPeopleAgents.py](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/create-entities/postPeopleAgents.py) to post the persons remaining in `person-template.csv` to ArchivesSpace.
 
 ## :fontawesome-solid-user-group: Families
-1. Get list of the persons currently in your ArchivesSpace production instance by running [getAllFamiliesCSV.py](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/get-existing-entities/getAllFamiliesCSV.py) to create `allFamilies.csv`.The time it takes to run the script will vary based on the number of entities and your internet speed, but in general, allow at least 5 minutes per 1000 entities for GET scripts.
+1. Get list of the families currently in your ArchivesSpace production instance by running [getAllFamiliesCSV.py](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/get-existing-entities/getAllFamiliesCSV.py) to create `allFamilies.csv`.The time it takes to run the script will vary based on the number of entities and your internet speed, but in general, allow at least 5 minutes per 1000 entities for GET scripts.
 
-2. Use `allFamilies.csv` to determine if any of the persons in your completed `family-template.csv` already exist in ArchivesSpace. While you can use any method you are comfortable with to determine if any persons already exist, I would recommend running `mergeTwoCSVs.py` to automatically match existing Families by name. For more instructions on this method, see [matching workflow](../python-scripts/matching-names.md).
+2. Use `allFamilies.csv` to determine if any of the families in your completed `family-template.csv` already exist in ArchivesSpace. While you can use any method you are comfortable with to determine if any families already exist, I would recommend running `mergeTwoCSVs.py` to automatically match existing families by name. For more instructions on this method, see [matching workflow](../python-scripts/matching-names.md).
 
 3. If any families already exist, delete their rows from `family-template.csv` and add their names and URIs to `alreadyExistingEntities.csv`. This should leave you with a `family-template.csv` that only contains new families.
 

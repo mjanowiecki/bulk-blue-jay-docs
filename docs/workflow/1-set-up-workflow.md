@@ -22,7 +22,7 @@ In order to reduce typos and errors in our objects, our scripts verify many of t
 
 1. Download Controlled Value list CSV from your ArchivesSpace instance. 
 2. Rename the CSV `enumerations.csv`. 
-3. Place the CSV in the directory in the `create_entities` folder of your archivesspace-collection-ingest repository.
+3. Place the CSV in the `create_entities` folder of your archivesspace-collection-ingest repository.
 
 If your controlled lists are ever updated in ArchivesSpace, simply replace the CSV with a newer export and rename it as `enumerations.csv`. You do not have to make any changes to the CSV data itself.
 

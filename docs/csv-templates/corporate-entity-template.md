@@ -6,6 +6,10 @@ hide:
 
 # How to fill out corporate entity template CSV
 
+For template, go to link and then click "Download raw file" on right upper corner.
+![Download raw file](../img/raw-file.png){ align=left }
+<br>
+
 :material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/corporate-entity-blank.csv)
 
 :material-file-document-check-outline: [Download example template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/corporate-entity-example.csv)
@@ -164,7 +168,7 @@ hide:
         - end_date_standardized_type
             - ArchivesSpace field equivalent: Range Date - End Standardized Date Type
             - Required in field: :x: False
-            - Data type:[Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - End Date Standardized Type
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - End Date Standardized Type
     - Example: `date_type_structured==range;;date_certainty==approximate;;begin_date_expression==1985;;end_date_expression==2010`
 
 ### Columns related to `Description Information: Notes`
@@ -177,7 +181,12 @@ hide:
         - note_type
             - ArchivesSpace field equivalent: Note Type
             - Required in field: :white_check_mark: True
-            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - 
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list)
+                - bioghist
+                - mandate
+                - legal_status
+                - structure_or_genealogy
+                - general_context
         - publish
             - ArchivesSpace field equivalent: Publish
             - Required in field: :white_check_mark: True

@@ -6,11 +6,15 @@ hide:
 
 # How to fill out archival object template CSV
 
+For template, go to link and then click "Download raw file" on right upper corner.
+![Download raw file](../img/raw-file.png){ align=left }
+<br>
+
 :material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/archival-object-template-blank.csv)
 
 :material-file-document-check-outline: [Download example template (uri)](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/archival-object-template-uri-example.csv)
 
-:material-file-document-check-outline: [Download example template (string](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/archival-object-template-string-example.csv)
+:material-file-document-check-outline: [Download example template (string)](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/archival-object-template-string-example.csv)
 
 ## :octicons-light-bulb-16: Example of completed `archival_objects.csv`
 
@@ -71,7 +75,7 @@ hide:
     - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
 
 ??? note "suppressed"
-    - ArchivesSpace field equivalent: Supress button
+    - ArchivesSpace field equivalent: Suppress button
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
     - Data type: [Boolean](../workflow/2-fill-out-templates.md/#boolean)
@@ -104,7 +108,7 @@ hide:
             - Required in field: :x: False
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Language ISO 15924
         - label
-            - ArchivesSpace field equivalent: 
+            - ArchivesSpace field equivalent: Label
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string)
         - publish
@@ -137,15 +141,15 @@ hide:
             - Required in field: :white_check_mark: True
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Type
         - begin
-            - ArchivesSpace field equivalent: 
+            - ArchivesSpace field equivalent: Begin
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string) - YYYY, YYYY-MM, or YYYY-MM-DD
         - end
-            - ArchivesSpace field equivalent: 
+            - ArchivesSpace field equivalent: End
             - Required in field: :x: False
             - Data type: [String](../workflow/2-fill-out-templates.md/#string) - YYYY, YYYY-MM, or YYYY-MM-DD
         - certainty
-            - ArchivesSpace field equivalent: 
+            - ArchivesSpace field equivalent: Certainty
             - Required in field: :x: False
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Date Certainty
     - Example: `label==creation;;date_type==single;;expression==2007 April 30;;begin==2007-04-30`
@@ -197,7 +201,7 @@ hide:
         - relator
             - ArchivesSpace field equivalent: Relator
             - Required in field: :x: False
-            - Data type:[Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Linked Agent Archival Record Relators
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Linked Agent Archival Record Relators
         - role
             - - ArchivesSpace field equivalent: Role
             - Required in field: :white_check_mark: True
@@ -266,7 +270,7 @@ Single type notes
         - note_type
             - ArchivesSpace field equivalent: Note Type
             - Required in field: :white_check_mark: True
-            - Data type:[Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Note Multipart Type
+            - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Note Multipart Type
         - publish
             - ArchivesSpace field equivalent: Publish
             - Required in field: :white_check_mark: True

@@ -15,7 +15,7 @@ In the example below, our `Ref ID` is `/repositories/3/resources/1821`.
 
 # Create new top-level series in ArchivesSpace
 
-If your collection includes series, you can also create them manually at this point. While they can be included in your archival objects template, manually creating series may make the process easier. Record their `Ref IDs` in the `parent` column of your archival object template. 
+If your collection includes series, you can also create them manually at this point. Record their `Ref IDs` in the `parent` column of your archival object template. 
 
 In our example collection, we have three series with the following `Ref IDs`.
 

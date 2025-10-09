@@ -6,6 +6,10 @@ hide:
 
 # How to fill out subject template CSV
 
+For template, go to link and then click "Download raw file" on right upper corner.
+![Download raw file](../img/raw-file.png){ align=left }
+<br>
+
 :material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/subject-template-blank.csv)
 
 :material-file-document-check-outline: [Download example template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/subject-template-example.csv)
@@ -31,7 +35,7 @@ hide:
     - Data type: [String](../workflow/2-fill-out-templates.md/#string) - External URI
 
 ??? note "source"
-    - ArchivesSpace field equivalent:  
+    - ArchivesSpace field equivalent: Source
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
     - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Subject Source
@@ -45,7 +49,7 @@ hide:
     - Data type: [String](../workflow/2-fill-out-templates.md/#string)
 
 ??? note "term_type"
-    - ArchivesSpace field equivalent: Term  
+    - ArchivesSpace field equivalent: Type  
     - Required in CSV: :white_check_mark: True
     - Allows multiple values: :x: False 
     - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Subject Term Type

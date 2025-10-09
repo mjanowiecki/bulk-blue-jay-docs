@@ -6,6 +6,10 @@ hide:
 
 # How to fill out top container template CSV
 
+For template, go to link and then click "Download raw file" on right upper corner.
+![Download raw file](../img/raw-file.png){ align=left }
+<br>
+
 :material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/top-container-template-blank.csv)
 
 :material-file-document-check-outline: [Download example template]()

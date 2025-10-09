@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-For your collection, create spreadsheets for the following types of entities according to our template guidelines. These templates assume that you will create the main resource for the collection manually.
+For your collection, create spreadsheets for the following types of entities according to our template guidelines. These templates assume that you will create the main resource and top-level series for the collection manually.
 
 ## Available CSV templates
 - [:material-file-document: Archival object template](../csv-templates/archival-object-template.md)
@@ -128,7 +128,7 @@ Repeatable ref fields are separated by a single pipe `|`. Be sure there are no s
 
 This data type is specific to the Big Blue Jay workflow templates and helps us represent fields with multiple subfields. Each subfield is linked to its value by `==` and each subfield and its value is separated from the other subfields with `;;`.
 
-For instance, the `linked_agents` field has three subfields: `role`, `relator`, and `ref`. This means a corporate entity with the role value of `creator`, a relator value of `pht`, and an ref value of `/agents/corporate_entities/388` would be formatted as followed:
+For instance, the `linked_agents` field has three subfields: `role`, `relator`, and `ref`. This means a corporate entity with the role value of `creator`, a relator value of `pht`, and a ref value of `/agents/corporate_entities/388` would be formatted as followed:
 
 `role==creator;;relator==pht;;ref==/agents/corporate_entities/388`
 
@@ -136,7 +136,7 @@ If the field needs to be repeated, each field is separated by double pipes `||`.
 
 `role==creator;;relator==pht;;ref==/agents/corporate_entities/388||role==creator;;relator==edt;;ref==/agents/corporate_entities/698`
 
-The subfields can be in any order within a single field area. These entries are equally as valid and do not have be consistent across a single column.
+The subfields can be in any order within a single field area. For instance, the entries below are equally valid and do not have be consistent across a single column.
 
 - `relator==pht;;ref==/agents/corporate_entities/388;;role==creator`
 - `role==creator;;relator==pht;;ref==/agents/corporate_entities/388`

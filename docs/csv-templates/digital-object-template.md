@@ -4,6 +4,11 @@ hide:
   - toc
 ---
 # How to fill out digital object template CSV
+
+For template, go to link and then click "Download raw file" on right upper corner.
+![Download raw file](../img/raw-file.png){ align=left }
+<br>
+
 :material-file-document: [Download blank template](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/blank-templates/digital-object-template-blank.csv)
 
 :material-file-document-check-outline: [Download example template (uri)](https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/csv-templates/example-templates/digital-object-template-uri-example.csv)
@@ -204,7 +209,7 @@ hide:
             - Required in field: :x: False
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Linked Agent Archival Record Relators
         - role
-            - - ArchivesSpace field equivalent: Role
+            - ArchivesSpace field equivalent: Role
             - Required in field: :white_check_mark: True
             - Data type: [Controlled list](../workflow/2-fill-out-templates.md/#controlled-list) - Linked Agent Role
     - Example: `role==creator;;relator==pht;;ref==/agents/corporate_entities/388`
