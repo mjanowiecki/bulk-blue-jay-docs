@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../7-update-archival-objects/">
+        <link rel="prev" href="../7-update-digital-objects/">
       
       
-        <link rel="next" href="../9-update-digital-objects/">
+        <link rel="next" href="../9-update-archival-objects/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Post new archival objects to ArchivesSpace - Bulk Blue Jay Workflow</title>
+        <title>Post digital objects to ArchivesSpace - Bulk Blue Jay Workflow</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#steps" class="md-skip">
+        <a href="#post-digital-objects-to-archivesspace" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Post new archival objects to ArchivesSpace
+              Post digital objects to ArchivesSpace
             
           </span>
         </div>
@@ -504,11 +504,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../7-update-archival-objects/" class="md-nav__link">
+      <a href="../7-update-digital-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    7. Update archival object template
+    7. Update digital object template
     
   </span>
   
@@ -532,12 +532,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    8. Post archival objects
+    8. Post digital objects
     
   </span>
   
@@ -549,7 +551,7 @@
         
   
   <span class="md-ellipsis">
-    8. Post archival objects
+    8. Post digital objects
     
   </span>
   
@@ -561,6 +563,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -594,11 +598,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../9-update-digital-objects/" class="md-nav__link">
+      <a href="../9-update-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    9. Update digital object template
+    9. Update archival object template
     
   </span>
   
@@ -616,11 +620,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../10-post-digital-objects/" class="md-nav__link">
+      <a href="../10-post-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    10. Post digital objects
+    10. Post archival objects
     
   </span>
   
@@ -969,6 +973,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1006,15 +1012,18 @@
   
 
 
-  <h1>8. Post archival objects</h1>
-
+<h1 id="post-digital-objects-to-archivesspace">Post digital objects to ArchivesSpace<a class="headerlink" href="#post-digital-objects-to-archivesspace" title="Permanent link">&para;</a></h1>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>For help running scripts, please see <a href="../../python-scripts/running-the-scripts/">Running the scripts</a> help page.</p>
+<p>The order you upload agents, top containers, and subjects does not matter, but it is important to upload all new entities before your archival objects.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For help running scripts, please see <a href="../../python-scripts/running-the-scripts/">Create entity scripts</a> help page.</p>
 </div>
 <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Use <a href="https://github.com/mjanowiecki/archivesspace-collection-ingest/blob/main/create-entities/postArchivalObjects.py"><code>postArchivalObjects.py</code></a> to post archival objects in <code>archival-object-template.csv</code> to ArchivesSpace.</li>
+<li>Use <code>postDigitalObjects.py</code> to post digital objects in <code>digital_object_template.csv</code> to ArchivesSpace. </li>
 </ol>
 
 
@@ -1058,7 +1067,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../7-update-archival-objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7. Update archival object template">
+          <a href="../7-update-digital-objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 7. Update digital object template">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1068,20 +1077,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                7. Update archival object template
+                7. Update digital object template
               </div>
             </div>
           </a>
         
         
           
-          <a href="../9-update-digital-objects/" class="md-footer__link md-footer__link--next" aria-label="Next: 9. Update digital object template">
+          <a href="../9-update-archival-objects/" class="md-footer__link md-footer__link--next" aria-label="Next: 9. Update archival object template">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                9. Update digital object template
+                9. Update archival object template
               </div>
             </div>
             <div class="md-footer__button md-icon">

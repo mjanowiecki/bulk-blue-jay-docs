@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../workflow/10-post-digital-objects/">
+        <link rel="prev" href="../../workflow/10-post-archival-objects/">
       
       
         <link rel="next" href="../corporate-entity-template/">
@@ -499,11 +499,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/7-update-archival-objects/" class="md-nav__link">
+      <a href="../../workflow/7-update-digital-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    7. Update archival object template
+    7. Update digital object template
     
   </span>
   
@@ -521,11 +521,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/8-post-archival-objects/" class="md-nav__link">
+      <a href="../../workflow/8-post-digital-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    8. Post archival objects
+    8. Post digital objects
     
   </span>
   
@@ -543,11 +543,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/9-update-digital-objects/" class="md-nav__link">
+      <a href="../../workflow/9-update-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    9. Update digital object template
+    9. Update archival object template
     
   </span>
   
@@ -565,11 +565,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/10-post-digital-objects/" class="md-nav__link">
+      <a href="../../workflow/10-post-archival-objects/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    10. Post digital objects
+    10. Post archival objects
     
   </span>
   
@@ -1265,6 +1265,7 @@
 <th>extents</th>
 <th>linked_agents</th>
 <th>subjects</th>
+<th>digital_objects</th>
 <th>singlepart_note</th>
 <th>multipart_note</th>
 <th>instances</th>
@@ -1286,6 +1287,7 @@
 <td>number==26;;portion==whole;;extent_type==Items;;container_summary==26 cassettes</td>
 <td>role==creator;;ref==/agents/people/6453||role==creator;;ref==/agents/people/6454</td>
 <td>/subjects/2437|/subjects/2727</td>
+<td>ref==/repositories/3/digital_objects/15784;;is_representative==False</td>
 <td></td>
 <td>type==arrangement;;publish==True;;content==Arranged by identified bird.</td>
 <td></td>
@@ -1305,6 +1307,7 @@
 <td>number==175;;portion==whole;;extent_type==photographic_prints;;container_summary==175 color photos</td>
 <td>role==creator;;ref==/agents/people/6453||role==creator;;ref==/agents/people/6454</td>
 <td>/subjects/2730|/subjects/2727</td>
+<td>ref==/repositories/3/digital_objects/15783;;is_representative==False</td>
 <td>type==physdesc;;publish==True;;content==175 photographs of 57 feathers.</td>
 <td>type==arrangement;;publish==True;;content==Arranged by feather identifier.</td>
 <td></td>
@@ -1323,6 +1326,7 @@
 <td>label==creation;;date_type==inclusive;;begin==2001;;end==2004</td>
 <td>number==.835;;container_summary==4 folders;;portion==whole;;extent_type==cubic_feet</td>
 <td>role==creator;;ref==/agents/corporate_entities/2018</td>
+<td></td>
 <td></td>
 <td>type==materialspec;;publish==True;;content==Includes drafts of the paper, “Are blue jays the rudest birds in Maryland? A scientific approach.”</td>
 <td>type==acqinfo;;publish==True;;content==Processed by Lauren McAwesomeSauce in May 2025.</td>
@@ -1727,7 +1731,7 @@
 <details class="note">
 <summary>instances</summary>
 <ul>
-<li>ArchivesSpace field equivalent: Instances section</li>
+<li>ArchivesSpace field equivalent: Add Container Instance</li>
 <li>Required in CSV: <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /> False</li>
 <li>Allows multiple values: <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> True</li>
 <li>Data type: <a href="../../workflow/2-fill-out-templates/#subfield-type">Subfield type</a></li>
@@ -1785,6 +1789,31 @@
 <li>Example: <code>indicator_2==6;;ref==/repositories/3/top_containers/21451;;instance_type==mixed_materials;;type_2==folder;;is_representative==False</code></li>
 </ul>
 </details>
+<details class="note">
+<summary>digital_objects</summary>
+<ul>
+<li>ArchivesSpace field equivalent: Add Digital Object</li>
+<li>Required in CSV: <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /> False</li>
+<li>Allows multiple values: <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> True</li>
+<li>Data type: <a href="../../workflow/2-fill-out-templates/#subfield-type">Subfield type</a></li>
+<li>Allowed subfields:<ul>
+<li>is_representative<ul>
+<li>ArchivesSpace field equivalent: Make Representative</li>
+<li>Required in field: <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:" /> False</li>
+<li>Data type: <a href="../../workflow/2-fill-out-templates/#boolean">Boolean</a></li>
+</ul>
+</li>
+<li>ref<ul>
+<li>ArchivesSpace field equivalent: Digital Object</li>
+<li>Required in field: <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:" /> True</li>
+<li>Data type: <a href="../../workflow/2-fill-out-templates/#ref">Ref</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Example: <code>ref==/repositories/3/digital_objects/15783;;is_representative==False</code></li>
+</ul>
+</details>
 <h2 id="default-values"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25M10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"/></svg></span> Default values<a class="headerlink" href="#default-values" title="Permanent link">&para;</a></h2>
 <p>These are values automatically added to each record and can only be changed by editing the <code>postArchivalObjects.py</code> script.</p>
 <ul>
@@ -1832,7 +1861,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../workflow/10-post-digital-objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 10. Post digital objects">
+          <a href="../../workflow/10-post-archival-objects/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 10. Post archival objects">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1842,7 +1871,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                10. Post digital objects
+                10. Post archival objects
               </div>
             </div>
           </a>
