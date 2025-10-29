@@ -4,9 +4,6 @@ hide:
   - toc
 ---
 
-# Coming soon!
-- Linking digital objects to archival objects expected by October 2025.
-
 # Update digital object template with URIs
 
 While there are numerous methods you could use to replace entity names with URIs in the `digital-object-template.csv`, we have a script available that does this automatically using spreadsheets you already have. To do this method, see the steps below.

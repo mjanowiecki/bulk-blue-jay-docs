@@ -10,10 +10,11 @@ nav:
     - 4. Post agents: workflow/4-post-agents.md
     - 5. Post subjects: workflow/5-post-subjects.md
     - 6. Post top containers: workflow/6-post-top-containers.md
-    - 7. Update archival object template: workflow/7-update-archival-objects.md
-    - 8. Post archival objects: workflow/8-post-archival-objects.md
-    - 9. Update digital object template: workflow/9-update-digital-objects.md
-    - 10. Post digital objects: workflow/10-post-digital-objects.md
+    - 7. Update digital object template: workflow/7-update-digital-objects.md
+    - 8. Post digital objects: workflow/8-post-digital-objects.md
+    - 9. Update archival object template: workflow/9-update-archival-objects.md
+    - 10. Post archival objects: workflow/10-post-archival-objects.md
+
   - CSV templates:
     - Archival objects: csv-templates/archival-object-template.md
     - Corporate entities: csv-templates/corporate-entity-template.md
