@@ -56,4 +56,4 @@ secretProd.py
 
 ## 4. Create a CSV called `alreadyExistingEntities.csv`
 
-This spreadsheet should have three columns: `agent_name`, `subject_name`, and `uri`. After creating it, leave it blank for now. It will be used in steps 4, 5, and 8.
+This spreadsheet should have three columns: `agent_name`, `subject_name`, and `uri`. After creating it, leave it blank for now. It will be used in steps 4, 5, 7, and 9.
